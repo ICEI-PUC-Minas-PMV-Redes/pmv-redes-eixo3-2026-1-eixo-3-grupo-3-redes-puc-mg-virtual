@@ -9,23 +9,23 @@
 
 | Campo | Descrição |
 |-------|-----------|
-| **Turma** | *(Informar a turma)* |
-| **Grupo** | *(Informar o número do grupo)* |
-| **Semestre/Ano** | *(Preencher)* |
+| **Turma** | *Eixo 3* |
+| **Grupo** | *Grupo 03* |
+| **Semestre/Ano** | *01/2026* |
 
 ### Integrantes
 
 | Nome Completo | Matrícula |
 |---------------|-----------|
-| *(Nome 1)* | *(Matrícula)* |
-| *(Nome 2)* | *(Matrícula)* |
-| *(Nome 3)* | *(Matrícula)* |
-| *(Nome 4)* | *(Matrícula)* |
-| *(Nome 5)* | *(Matrícula)* |
+| *Leonardo Silva Amaral* | *(Matrícula)* |
+| *Luis Felipe Guimarães Toledo da Silva* | *(Matrícula)* |
+| *Luis Augusto da Silva* | *(Matrícula)* |
+| *Talita Rosalina Ribeiro* | *890496* |
+| *Thiago Hideki do Prado Suzuki* | *(Matrícula)* |
 
 ### Orientador(a)
 
-*(Nome do(a) professor(a) orientador(a))*
+*Harison Herman Silva*
 
 ---
 
