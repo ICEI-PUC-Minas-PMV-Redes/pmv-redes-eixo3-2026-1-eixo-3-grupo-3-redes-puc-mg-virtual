@@ -17,11 +17,11 @@
 
 | Nome Completo | Matrícula |
 |---------------|-----------|
-| *Leonardo Silva Amaral* | *(Matrícula)* |
-| *Luis Felipe Guimarães Toledo da Silva* | *(Matrícula)* |
-| *Luis Augusto da Silva* | *(Matrícula)* |
-| *Talita Rosalina Ribeiro* | *890496* |
-| *Thiago Hideki do Prado Suzuki* | *(Matrícula)* |
+| *Leonardo Silva Amaral* | *(884122)* |
+| *Luis Felipe Guimarães Toledo da Silva* | *(884414)* |
+| *Luis Augusto da Silva* | *(888923)* |
+| *Talita Rosalina Ribeiro* | *(890496)* |
+| *Thiago Hideki do Prado Suzuki* | *(889683)* |
 
 ### Orientador(a)
 
