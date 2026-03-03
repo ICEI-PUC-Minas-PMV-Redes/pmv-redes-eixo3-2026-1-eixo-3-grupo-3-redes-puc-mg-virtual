@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel Administrativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Painel Administrativo</h1>
+    <button class="logout" onclick="logout()">Logout</button>
+</header>
+
+<nav>
+    <button onclick="mostrarSecao('dashboard')">Dashboard</button>
+    <button onclick="mostrarSecao('ordemservico')">Ordem de Serviço</button>
+    <button onclick="mostrarSecao('inventario')">Inventário</button>
+    <button onclick="mostrarSecao('clientes')">Clientes</button>
+</nav>
+
+<main>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="secao ativa">
+        <h2>Status da Rede</h2>
+        <div class="card">Servidor: Online</div>
+        <div class="card">Firewall: Ativo</div>
+    </section>
+
+    <!-- Ordem de Serviço -->
+    <section id="ordemservico" class="secao">
+        <h2>Ordem de Serviço</h2>
+        <ul id="listaOrdens"></ul>
+
+        <div id="adminAreaOrdens">
+            <h3>Criar Nova Ordem de Serviço</h3>
+            <div class="form-group">
+                <input type="text" id="numeroOS" placeholder="Número da OS" readonly>
+            </div>
+            <div class="form-group">
+                <select id="clienteOS">
+                    <option value="">Selecione um Cliente</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" id="descricaoOS" placeholder="Descrição do Serviço">
+            </div>
+            <div class="form-group">
+                <select id="statusOS">
+                    <option value="Aberta">Aberta</option>
+                    <option value="Em Progresso">Em Progresso</option>
+                    <option value="Concluída">Concluída</option>
+                    <option value="Cancelada">Cancelada</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="number" id="valorOS" placeholder="Valor (R$)" step="0.01">
+            </div>
+            <div class="form-group">
+                <input type="date" id="dataOS">
+            </div>
+            <button onclick="adicionarOrdem()">Criar Ordem</button>
+        </div>
+    </section>
+
+    <!-- Inventário -->
+    <section id="inventario" class="secao">
+        <h2>Inventário</h2>
+        <ul id="listaInventario"></ul>
+
+        <div id="adminAreaInventario">
+            <h3>Adicionar Componentes</h3>
+            <input type="text" id="nomeComponente" placeholder="Nome">
+            <input type="number" id="quantidadeComponente" placeholder="Quantidade">
+            <button onclick="adicionarComponente()">Adicionar</button>
+        </div>
+    </section>
+
+    <!-- Clientes -->
+    <section id="clientes" class="secao">
+        <h2>Clientes</h2>
+        <ul id="listaClientes"></ul>
+
+        <div id="adminAreaClientes">
+            <h3>Adicionar Cliente</h3>
+            <input type="text" id="nomeCliente" placeholder="Nome">
+            <input type="text" id="contatoCliente" placeholder="Contato">
+            <button onclick="adicionarCliente()">Adicionar</button>
+        </div>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
