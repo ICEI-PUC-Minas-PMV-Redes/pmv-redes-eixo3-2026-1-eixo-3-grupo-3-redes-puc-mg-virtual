@@ -44,13 +44,13 @@
 
 ## 📖 Descrição do Projeto
 
-*Loja de informática de pequeno porte, contando com 2 pessoas responsáveis pelo atendimento e pelas atividades operacionais do estabelecimento.
+*Loja de informática de pequeno porte, contando com 2 pessoas responsáveis pelo atendimento e pelas atividades operacionais do estabelecimento.*
 
-Atualmente, o local possui apenas um computador, utilizado de forma básica pelos técnicos para registro de informações dos clientes e dos serviços realizados. Entretanto, não existe um sistema estruturado de cadastro com banco de dados, sendo que o registro de clientes é feito por meio de planilhas do Excel. Esse método acaba dificultando a organização das informações, a busca por dados específicos e o acompanhamento do histórico de atendimentos ao longo do tempo.
+*Atualmente, o local possui apenas um computador, utilizado de forma básica pelos técnicos para registro de informações dos clientes e dos serviços realizados. Entretanto, não existe um sistema estruturado de cadastro com banco de dados, sendo que o registro de clientes é feito por meio de planilhas do Excel. Esse método acaba dificultando a organização das informações, a busca por dados específicos e o acompanhamento do histórico de atendimentos ao longo do tempo.*
 
-Diante desse cenário, será realizado a implantação de um sistema de gerenciamento mais estruturado, que possua banco de dados para armazenamento seguro das informações dos clientes, além de um dashboard para visualização e acompanhamento dos registros. O sistema também permitirá a criação e controle de ordens de serviço, facilitando a organização dos atendimentos realizados pela loja, bem como a geração de invoices mensais, auxiliando no controle financeiro e administrativo do negócio.
+*Diante desse cenário, será realizado a implantação de um sistema de gerenciamento mais estruturado, que possua banco de dados para armazenamento seguro das informações dos clientes, além de um dashboard para visualização e acompanhamento dos registros. O sistema também permitirá a criação e controle de ordens de serviço, facilitando a organização dos atendimentos realizados pela loja, bem como a geração de invoices mensais, auxiliando no controle financeiro e administrativo do negócio.*
 
-Além disso, será implementada uma rede Wi-Fi destinada aos clientes que aguardam atendimento no estabelecimento, proporcionando maior conforto durante a espera e melhorando a experiência do cliente dentro da loja.*
+*Além disso, será implementada uma rede Wi-Fi destinada aos clientes que aguardam atendimento no estabelecimento, proporcionando maior conforto durante a espera e melhorando a experiência do cliente dentro da loja.*
 
 ---
 
