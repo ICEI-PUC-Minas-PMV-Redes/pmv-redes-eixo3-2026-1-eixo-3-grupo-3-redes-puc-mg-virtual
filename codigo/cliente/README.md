@@ -1,5 +1,5 @@
 # Código do Cliente (Front-end)
-Esta pasta contém o código-fonte do lado cliente da solução - um **Painel Administrativo Web** para gerenciamento de serviços técnicos, inventário de componentes e clientes.
+Esta pasta contém o código-fonte do lado cliente da solução - um **Painel Administrativo Web** para gerenciamento de serviços técnicos, relatório financeiro e clientes.
 
 ## Organização
 
@@ -27,11 +27,12 @@ O painel administrativo possui as seguintes seções:
 - Listagem com status coloridos (Aberta, Em Progresso, Concluída, Cancelada)
 - Visualização detalhada de cada ordem
 
-### 3. **Inventário**
-- Gerenciamento de componentes técnicos
-- Campos: Nome do componente, Quantidade
-- Adição de novos componentes
-- Exemplo pré-carregado: Placa Mãe Asus B550M, Processador Intel Core i7 12700F
+### 3. **Relatório Financeiro** - Gerenciamento financeiro completo
+- **Resumo Financeiro:** Exibe Receita Total, Despesas, Lucro Líquido e Pendentes
+- **Filtro por Período:** Selecione data inicial e final para análise de período específico
+- **Tabela de Movimentações:** Visualização de todas as transações (receitas e despesas) com data, tipo, descrição, valor e status
+- **Registrar Despesa:** Adicione despesas com categoria (Fornecedores, Aluguel, Manutenção, Outros) e data
+- **Registrar Receita:** Adicione receitas com categoria (Serviços, Consultoria, Manutenção, Suporte, Outros), status (Pendente/Paga) e data
 
 ### 4. **Clientes**
 - Cadastro e gerenciamento de clientes
