@@ -27,7 +27,7 @@ O painel administrativo possui as seguintes seções:
 - Listagem com status coloridos (Aberta, Em Progresso, Concluída, Cancelada)
 - Visualização detalhada de cada ordem
 
-### 3. **Relatório Financeiro** - Gerenciamento financeiro completo
+### 3. **Relatório Financeiro**
 - **Resumo Financeiro:** Exibe Receita Total, Despesas, Lucro Líquido e Pendentes
 - **Filtro por Período:** Selecione data inicial e final para análise de período específico
 - **Tabela de Movimentações:** Visualização de todas as transações (receitas e despesas) com data, tipo, descrição, valor e status
