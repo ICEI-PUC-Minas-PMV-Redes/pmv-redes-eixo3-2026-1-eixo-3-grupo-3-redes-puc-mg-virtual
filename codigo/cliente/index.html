@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Painel Administrativo</title>
+    <title>Painel de Rede</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
 <nav>
     <button onclick="mostrarSecao('dashboard')">Dashboard</button>
     <button onclick="mostrarSecao('ordemservico')">Ordem de Serviço</button>
-    <button onclick="mostrarSecao('inventario')">Inventário</button>
+    <button onclick="mostrarSecao('relatoriofinanceiro')">Relatório Financeiro</button>
     <button onclick="mostrarSecao('clientes')">Clientes</button>
 </nav>
 
@@ -64,16 +64,110 @@
         </div>
     </section>
 
-    <!-- Inventário -->
-    <section id="inventario" class="secao">
-        <h2>Inventário</h2>
-        <ul id="listaInventario"></ul>
+    <!-- Relatório Financeiro -->
+    <section id="relatoriofinanceiro" class="secao">
+        <h2>Relatório Financeiro</h2>
+        
+        <div class="resumo-financeiro">
+            <div class="card-resumo">
+                <h3>Receita Total</h3>
+                <p class="valor" id="receitaTotal">R$ 0.00</p>
+            </div>
+            <div class="card-resumo">
+                <h3>Despesas</h3>
+                <p class="valor" id="despesasTotal">R$ 0.00</p>
+            </div>
+            <div class="card-resumo">
+                <h3>Lucro Líquido</h3>
+                <p class="valor lucro" id="lucroLiquido">R$ 0.00</p>
+            </div>
+            <div class="card-resumo">
+                <h3>Pendente</h3>
+                <p class="valor pendente" id="pendentesTotal">R$ 0.00</p>
+            </div>
+        </div>
 
-        <div id="adminAreaInventario">
-            <h3>Adicionar Componentes</h3>
-            <input type="text" id="nomeComponente" placeholder="Nome">
-            <input type="number" id="quantidadeComponente" placeholder="Quantidade">
-            <button onclick="adicionarComponente()">Adicionar</button>
+        <div class="relatorio-periodo">
+            <h3>Filtrar por Período</h3>
+            <div class="filtro-grupo">
+                <input type="date" id="dataInicio" placeholder="Data Inicial">
+                <input type="date" id="dataFim" placeholder="Data Final">
+                <button onclick="filtrarRelatorioPeriodo()">Filtrar</button>
+            </div>
+        </div>
+
+        <div class="tabela-movimentacoes">
+            <h3>Movimentações Financeiras</h3>
+            <table id="tabelaMovimentacoes">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                </tbody>
+            </table>
+        </div>
+
+        <div id="adminAreaRelatorio">
+            <div class="area-financeira">
+                <div class="area-despesa">
+                    <h3>Registrar Despesa</h3>
+                    <div class="form-group">
+                        <input type="text" id="descricaoDespesa" placeholder="Descrição da Despesa">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="valorDespesa" placeholder="Valor (R$)" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <select id="categoriaDespesa">
+                            <option value="">Selecione a Categoria</option>
+                            <option value="Fornecedores">Fornecedores</option>
+                            <option value="Aluguel">Aluguel</option>
+                            <option value="Manutenção">Manutenção</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="dataDespesa">
+                    </div>
+                    <button onclick="registrarDespesa()" class="btn-despesa">Registrar Despesa</button>
+                </div>
+
+                <div class="area-receita">
+                    <h3>Registrar Receita</h3>
+                    <div class="form-group">
+                        <input type="text" id="descricaoReceita" placeholder="Descrição da Receita">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="valorReceita" placeholder="Valor (R$)" step="0.01">
+                    </div>
+                    <div class="form-group">
+                        <select id="categoriaReceita">
+                            <option value="">Selecione a Categoria</option>
+                            <option value="Serviços">Serviços</option>
+                            <option value="Consultoria">Consultoria</option>
+                            <option value="Manutenção">Manutenção</option>
+                            <option value="Suporte">Suporte</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="statusReceita">
+                            <option value="Pendente">Pendente</option>
+                            <option value="Paga">Paga</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="dataReceita">
+                    </div>
+                    <button onclick="registrarReceita()" class="btn-receita">Registrar Receita</button>
+                </div>
+            </div>
         </div>
     </section>
 

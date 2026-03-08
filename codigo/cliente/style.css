@@ -102,7 +102,216 @@ main {
     border-left: 5px solid #3b82f6;
 }
 
-/* ORDEM DE SERVIÇO */
+/* RELATÓRIO FINANCEIRO */
+.resumo-financeiro {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.card-resumo {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-top: 4px solid #3b82f6;
+    text-align: center;
+}
+
+.card-resumo h3 {
+    margin: 0 0 10px 0;
+    color: #555;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-resumo .valor {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1e3a8a;
+    margin: 10px 0 0 0;
+}
+
+.card-resumo .valor.lucro {
+    color: #10b981;
+}
+
+.card-resumo .valor.pendente {
+    color: #f59e0b;
+}
+
+.relatorio-periodo {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.relatorio-periodo h3 {
+    margin-top: 0;
+}
+
+.filtro-grupo {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.filtro-grupo input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.filtro-grupo button {
+    padding: 10px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.filtro-grupo button:hover {
+    background-color: #2563eb;
+}
+
+.tabela-movimentacoes {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.tabela-movimentacoes h3 {
+    margin-top: 0;
+}
+
+#tabelaMovimentacoes {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#tabelaMovimentacoes thead {
+    background-color: #f0f0f0;
+}
+
+#tabelaMovimentacoes th {
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+}
+
+#tabelaMovimentacoes td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+#tabelaMovimentacoes tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.badge-tipo {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge-tipo.receita {
+    background-color: #10b981;
+}
+
+.badge-tipo.despesa {
+    background-color: #ef4444;
+}
+
+.valor-receita {
+    color: #10b981;
+    font-weight: bold;
+}
+
+.valor-despesa {
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.status-badge.paga {
+    background-color: #10b981;
+}
+
+.status-badge.pendente {
+    background-color: #f59e0b;
+}
+
+.status-badge.cancelada {
+    background-color: #ef4444;
+}
+
+/* FORMULÁRIO DE DESPESA E RECEITA */
+#adminAreaRelatorio {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#adminAreaRelatorio h3 {
+    margin-top: 0;
+}
+
+.area-financeira {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.area-despesa,
+.area-receita {
+    display: flex;
+    flex-direction: column;
+}
+
+.area-despesa h3,
+.area-receita h3 {
+    margin: 0 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.area-despesa h3 {
+    border-bottom-color: #ef4444;
+    color: #ef4444;
+}
+
+.area-receita h3 {
+    border-bottom-color: #10b981;
+    color: #10b981;
+}
+
 .form-group {
     margin: 12px 0;
 }
@@ -124,20 +333,39 @@ main {
     box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
 }
 
-#adminAreaOrdens button {
-    width: 100%;
-    padding: 10px;
-    background-color: #3b82f6;
+.btn-despesa,
+.btn-receita {
+    padding: 12px;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    transition: all 0.3s ease;
 }
 
-#adminAreaOrdens button:hover {
-    background-color: #2563eb;
+.btn-despesa {
+    background-color: #ef4444;
+}
+
+.btn-despesa:hover {
+    background-color: #dc2626;
+}
+
+.btn-receita {
+    background-color: #10b981;
+}
+
+.btn-receita:hover {
+    background-color: #059669;
+}
+
+@media (max-width: 768px) {
+    .area-financeira {
+        grid-template-columns: 1fr;
+    }
 }
 
 #listaOrdens {
@@ -179,15 +407,6 @@ main {
     font-size: 13px;
 }
 
-.status-badge {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    color: white;
-}
-
 .status-badge.aberta {
     background-color: #f59e0b;
 }
@@ -198,10 +417,6 @@ main {
 
 .status-badge.concluída {
     background-color: #10b981;
-}
-
-.status-badge.cancelada {
-    background-color: #ef4444;
 }
 
 .ordem-item.status-aberta {
@@ -216,6 +431,30 @@ main {
     border-left-color: #10b981;
 }
 
-.ordem-item.status-cancelada {
-    border-left-color: #ef4444;
+#adminAreaOrdens {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#adminAreaOrdens h3 {
+    margin-top: 0;
+}
+
+#adminAreaOrdens button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#adminAreaOrdens button:hover {
+    background-color: #2563eb;
 }
