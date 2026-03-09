@@ -49,7 +49,7 @@ O painel administrativo possui as seguintes seções:
 ### Desenvolvimento Local
 1. **Clone ou baixe os arquivos para uma pasta local**
 ```bash
-   git clone
+   git clone https://github.com/ICEI-PUC-Minas-PMV-Redes/pmv-redes-eixo3-2026-1-eixo-3-grupo-3-redes-puc-mg-virtual/
    cd cliente
 ```
 
