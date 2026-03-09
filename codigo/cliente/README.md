@@ -49,7 +49,7 @@ O painel administrativo possui as seguintes seções:
 ### Desenvolvimento Local
 1. **Clone ou baixe os arquivos para uma pasta local**
 ```bash
-   git clone [seu-repositorio]
+   git clone
    cd cliente
 ```
 
