@@ -1,44 +1,72 @@
-// Credenciais simuladas
-const adminUser = "admin";
-const adminPass = "1234";
+const API_BASE_URL = "/api";
 
-// LOGIN
-function login() {
-    const usuario = document.getElementById("usuario").value;
+let movimentacoes = [];
+let clientes = [];
+let ordens = [];
+
+async function apiRequest(path, options = {}) {
+    const response = await fetch(`${API_BASE_URL}${path}`, {
+        headers: {
+            "Content-Type": "application/json",
+            ...(options.headers || {})
+        },
+        ...options
+    });
+
+    const contentType = response.headers.get("content-type") || "";
+    const payload = contentType.includes("application/json") ? await response.json() : null;
+
+    if (!response.ok) {
+        throw new Error(payload?.erro || "Erro ao comunicar com o servidor.");
+    }
+
+    return payload;
+}
+
+function formatCurrency(value) {
+    return `R$ ${Number(value || 0).toFixed(2)}`;
+}
+
+function isLoginPage() {
+    return window.location.pathname.endsWith("/login.html");
+}
+
+async function login() {
+    const usuario = document.getElementById("usuario").value.trim();
     const senha = document.getElementById("senha").value;
+    const erroLogin = document.getElementById("erroLogin");
 
-    if (usuario === adminUser && senha === adminPass) {
-        localStorage.setItem("perfil", "admin");
-        window.location.href = "index.html";
-    } else {
-        document.getElementById("erroLogin").textContent = "Usuário ou senha inválidos.";
+    erroLogin.textContent = "";
+
+    try {
+        const response = await apiRequest("/auth/login", {
+            method: "POST",
+            body: JSON.stringify({ usuario, senha })
+        });
+
+        localStorage.setItem("perfil", response.perfil);
+        localStorage.setItem("usuario", response.usuario);
+        window.location.href = "/";
+    } catch (error) {
+        erroLogin.textContent = error.message;
     }
 }
 
-// LOGOUT
-function logout() {
+async function logout() {
+    try {
+        await apiRequest("/auth/logout", {
+            method: "POST",
+            body: JSON.stringify({})
+        });
+    } catch (error) {
+        console.error(error);
+    }
+
     localStorage.removeItem("perfil");
-    window.location.href = "login.html";
+    localStorage.removeItem("usuario");
+    window.location.href = "/login.html";
 }
 
-// Verifica se está logado
-if (window.location.pathname.includes("index.html")) {
-    const perfil = localStorage.getItem("perfil");
-
-    if (!perfil) {
-        window.location.href = "login.html";
-    }
-
-    window.onload = function() {
-        configurarPermissoes();
-        atualizarRelatorioFinanceiro();
-        atualizarClientes();
-        atualizarOrdens();
-        preencherClientesOS();
-    }
-}
-
-// Controle de permissões
 function configurarPermissoes() {
     const perfil = localStorage.getItem("perfil");
 
@@ -49,7 +77,6 @@ function configurarPermissoes() {
     }
 }
 
-// Alternar seções
 function mostrarSecao(secaoId) {
     document.querySelectorAll(".secao").forEach(secao => {
         secao.classList.remove("ativa");
@@ -58,26 +85,29 @@ function mostrarSecao(secaoId) {
     document.getElementById(secaoId).classList.add("ativa");
 }
 
-// Dados simulados
-let movimentacoes = [
-    { data: "2024-01-15", tipo: "Receita", descricao: "Serviço técnico - OS-001", valor: 150.00, status: "Paga" },
-    { data: "2024-01-10", tipo: "Despesa", descricao: "Aluguel do espaço", valor: 500.00, status: "Paga", categoria: "Aluguel" },
-    { data: "2024-01-08", tipo: "Despesa", descricao: "Fornecimento de materiais", valor: 200.00, status: "Paga", categoria: "Fornecedores" }
-];
+async function carregarDashboard() {
+    const dashboard = await apiRequest("/dashboard");
+    const cards = document.querySelectorAll("#dashboard .card");
 
-let clientes = [
-    { nome: "Administrador", contato: "admin@empresa.com" }
-];
+    if (cards[0]) {
+        cards[0].textContent = `Servidor: ${dashboard.status_rede.servidor}`;
+    }
 
-let ordens = [
-    { numero: "OS-001", cliente: "Administrador", descricao: "Manutenção preventiva", status: "Concluída", valor: 150.00, data: "2024-01-15" }
-];
+    if (cards[1]) {
+        cards[1].textContent = `Firewall: ${dashboard.status_rede.firewall}`;
+    }
+}
 
-let proximoNumeroOS = 2;
+async function atualizarRelatorioFinanceiro(dataInicio = "", dataFim = "") {
+    const query = buildPeriodQuery(dataInicio, dataFim);
+    const [resumo, entries] = await Promise.all([
+        apiRequest(`/financeiro/resumo${query}`),
+        apiRequest(`/financeiro/movimentacoes${query}`)
+    ]);
 
-function atualizarRelatorioFinanceiro() {
+    movimentacoes = entries;
     atualizarTabelaMovimentacoes();
-    calcularResumoFinanceiro();
+    atualizarResumoFinanceiro(resumo);
 }
 
 function atualizarTabelaMovimentacoes() {
@@ -88,51 +118,30 @@ function atualizarTabelaMovimentacoes() {
     movimentacoes.forEach(mov => {
         const tr = document.createElement("tr");
         tr.className = `linha-${mov.tipo.toLowerCase()}`;
+        const endpoint = mov.tipo === "Receita" ? "receitas" : "despesas";
         tr.innerHTML = `
             <td>${mov.data}</td>
             <td><span class="badge-tipo ${mov.tipo.toLowerCase()}">${mov.tipo}</span></td>
             <td>${mov.descricao}</td>
-            <td class="valor-${mov.tipo.toLowerCase()}">R$ ${mov.valor.toFixed(2)}</td>
+            <td class="valor-${mov.tipo.toLowerCase()}">${formatCurrency(mov.valor)}</td>
             <td><span class="status-badge ${mov.status.toLowerCase()}">${mov.status}</span></td>
+            <td><button class="btn-excluir" onclick="excluirMovimentacao(${mov.id}, '${endpoint}')">Excluir</button></td>
         `;
         corpoTabela.appendChild(tr);
     });
 }
 
-function calcularResumoFinanceiro() {
-    let receita = 0;
-    let despesas = 0;
-    let pendentes = 0;
+function atualizarResumoFinanceiro(resumo) {
+    document.getElementById("receitaTotal").textContent = formatCurrency(resumo.receita_total);
+    document.getElementById("despesasTotal").textContent = formatCurrency(resumo.despesas_total);
+    document.getElementById("lucroLiquido").textContent = formatCurrency(resumo.lucro_liquido);
+    document.getElementById("pendentesTotal").textContent = formatCurrency(resumo.pendentes_total);
 
-    movimentacoes.forEach(mov => {
-        if (mov.tipo === "Receita") {
-            if (mov.status === "Paga") {
-                receita += mov.valor;
-            } else if (mov.status === "Pendente") {
-                pendentes += mov.valor;
-            }
-        } else if (mov.tipo === "Despesa") {
-            despesas += mov.valor;
-        }
-    });
-
-    const lucro = receita - despesas;
-
-    document.getElementById("receitaTotal").textContent = `R$ ${receita.toFixed(2)}`;
-    document.getElementById("despesasTotal").textContent = `R$ ${despesas.toFixed(2)}`;
-    document.getElementById("lucroLiquido").textContent = `R$ ${lucro.toFixed(2)}`;
-    document.getElementById("pendentesTotal").textContent = `R$ ${pendentes.toFixed(2)}`;
-
-    // Mudar cor do lucro se negativo
     const lucroElement = document.getElementById("lucroLiquido");
-    if (lucro < 0) {
-        lucroElement.style.color = "#ef4444";
-    } else {
-        lucroElement.style.color = "#10b981";
-    }
+    lucroElement.style.color = resumo.lucro_liquido < 0 ? "#ef4444" : "#10b981";
 }
 
-function filtrarRelatorioPeriodo() {
+async function filtrarRelatorioPeriodo() {
     const dataInicio = document.getElementById("dataInicio").value;
     const dataFim = document.getElementById("dataFim").value;
 
@@ -141,121 +150,85 @@ function filtrarRelatorioPeriodo() {
         return;
     }
 
-    const inicio = new Date(dataInicio);
-    const fim = new Date(dataFim);
-
-    const movimentacoesFiltradas = movimentacoes.filter(mov => {
-        const dataMov = new Date(mov.data);
-        return dataMov >= inicio && dataMov <= fim;
-    });
-
-    const corpoTabela = document.getElementById("corpoTabela");
-    corpoTabela.innerHTML = "";
-
-    movimentacoesFiltradas.forEach(mov => {
-        const tr = document.createElement("tr");
-        tr.className = `linha-${mov.tipo.toLowerCase()}`;
-        tr.innerHTML = `
-            <td>${mov.data}</td>
-            <td><span class="badge-tipo ${mov.tipo.toLowerCase()}">${mov.tipo}</span></td>
-            <td>${mov.descricao}</td>
-            <td class="valor-${mov.tipo.toLowerCase()}">R$ ${mov.valor.toFixed(2)}</td>
-            <td><span class="status-badge ${mov.status.toLowerCase()}">${mov.status}</span></td>
-        `;
-        corpoTabela.appendChild(tr);
-    });
-
-    // Calcular resumo para o período filtrado
-    let receita = 0;
-    let despesas = 0;
-    let pendentes = 0;
-
-    movimentacoesFiltradas.forEach(mov => {
-        if (mov.tipo === "Receita") {
-            if (mov.status === "Paga") {
-                receita += mov.valor;
-            } else if (mov.status === "Pendente") {
-                pendentes += mov.valor;
-            }
-        } else if (mov.tipo === "Despesa") {
-            despesas += mov.valor;
-        }
-    });
-
-    const lucro = receita - despesas;
-
-    document.getElementById("receitaTotal").textContent = `R$ ${receita.toFixed(2)}`;
-    document.getElementById("despesasTotal").textContent = `R$ ${despesas.toFixed(2)}`;
-    document.getElementById("lucroLiquido").textContent = `R$ ${lucro.toFixed(2)}`;
-    document.getElementById("pendentesTotal").textContent = `R$ ${pendentes.toFixed(2)}`;
-
-    const lucroElement = document.getElementById("lucroLiquido");
-    if (lucro < 0) {
-        lucroElement.style.color = "#ef4444";
-    } else {
-        lucroElement.style.color = "#10b981";
+    try {
+        await atualizarRelatorioFinanceiro(dataInicio, dataFim);
+    } catch (error) {
+        alert(error.message);
     }
 }
 
-function registrarDespesa() {
-    const descricao = document.getElementById("descricaoDespesa").value;
-    const valor = parseFloat(document.getElementById("valorDespesa").value);
+async function registrarDespesa() {
+    const descricao = document.getElementById("descricaoDespesa").value.trim();
+    const valor = document.getElementById("valorDespesa").value;
     const categoria = document.getElementById("categoriaDespesa").value;
     const data = document.getElementById("dataDespesa").value;
 
-    if (descricao && valor && categoria && data) {
-        movimentacoes.push({
-            data,
-            tipo: "Despesa",
-            descricao: `${descricao} (${categoria})`,
-            valor,
-            status: "Paga",
-            categoria
+    if (!descricao || !valor || !categoria || !data) {
+        alert("Por favor, preencha todos os campos!");
+        return;
+    }
+
+    try {
+        await apiRequest("/financeiro/despesas", {
+            method: "POST",
+            body: JSON.stringify({
+                descricao,
+                valor: Number(valor),
+                categoria,
+                data
+            })
         });
 
-        // Limpar formulário
         document.getElementById("descricaoDespesa").value = "";
         document.getElementById("valorDespesa").value = "";
         document.getElementById("categoriaDespesa").value = "";
         document.getElementById("dataDespesa").value = "";
 
-        atualizarRelatorioFinanceiro();
-    } else {
-        alert("Por favor, preencha todos os campos!");
+        await atualizarRelatorioFinanceiro();
+    } catch (error) {
+        alert(error.message);
     }
 }
 
-function registrarReceita() {
-    const descricao = document.getElementById("descricaoReceita").value;
-    const valor = parseFloat(document.getElementById("valorReceita").value);
+async function registrarReceita() {
+    const descricao = document.getElementById("descricaoReceita").value.trim();
+    const valor = document.getElementById("valorReceita").value;
     const categoria = document.getElementById("categoriaReceita").value;
     const status = document.getElementById("statusReceita").value;
     const data = document.getElementById("dataReceita").value;
 
-    if (descricao && valor && categoria && status && data) {
-        movimentacoes.push({
-            data,
-            tipo: "Receita",
-            descricao: `${descricao} (${categoria})`,
-            valor,
-            status: status,
-            categoria
+    if (!descricao || !valor || !categoria || !status || !data) {
+        alert("Por favor, preencha todos os campos!");
+        return;
+    }
+
+    try {
+        await apiRequest("/financeiro/receitas", {
+            method: "POST",
+            body: JSON.stringify({
+                descricao,
+                valor: Number(valor),
+                categoria,
+                status,
+                data
+            })
         });
 
-        // Limpar formulário
         document.getElementById("descricaoReceita").value = "";
         document.getElementById("valorReceita").value = "";
         document.getElementById("categoriaReceita").value = "";
         document.getElementById("statusReceita").value = "Pendente";
         document.getElementById("dataReceita").value = "";
 
-        atualizarRelatorioFinanceiro();
-    } else {
-        alert("Por favor, preencha todos os campos!");
+        await atualizarRelatorioFinanceiro();
+    } catch (error) {
+        alert(error.message);
     }
 }
 
-function atualizarClientes() {
+async function atualizarClientes() {
+    clientes = await apiRequest("/clientes");
+
     const lista = document.getElementById("listaClientes");
     if (!lista) return;
 
@@ -267,27 +240,49 @@ function atualizarClientes() {
     });
 }
 
+async function excluirMovimentacao(id, tipo) {
+    if (!confirm("Deseja excluir esta movimentação?")) {
+        return;
+    }
 
-
-function adicionarCliente() {
-    const nome = document.getElementById("nomeCliente").value;
-    const contato = document.getElementById("contatoCliente").value;
-
-    if (nome && contato) {
-        clientes.push({ nome, contato });
-        document.getElementById("nomeCliente").value = "";
-        document.getElementById("contatoCliente").value = "";
-        atualizarClientes();
-        preencherClientesOS();
-        preencherClientesNF();
+    try {
+        await apiRequest(`/financeiro/${tipo}/${id}`, { method: "DELETE" });
+        await atualizarRelatorioFinanceiro();
+        await carregarDashboard();
+    } catch (error) {
+        alert(error.message);
     }
 }
 
-// Funções para Ordem de Serviço
+async function adicionarCliente() {
+    const nome = document.getElementById("nomeCliente").value.trim();
+    const contato = document.getElementById("contatoCliente").value.trim();
+
+    if (!nome || !contato) {
+        alert("Por favor, preencha todos os campos!");
+        return;
+    }
+
+    try {
+        await apiRequest("/clientes", {
+            method: "POST",
+            body: JSON.stringify({ nome, contato })
+        });
+
+        document.getElementById("nomeCliente").value = "";
+        document.getElementById("contatoCliente").value = "";
+
+        await atualizarClientes();
+        preencherClientesOS();
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
 function gerarNumeroOS() {
     const numeroOS = document.getElementById("numeroOS");
     if (numeroOS) {
-        numeroOS.value = `OS-${String(proximoNumeroOS).padStart(3, '0')}`;
+        numeroOS.value = "Gerado automaticamente";
     }
 }
 
@@ -304,14 +299,18 @@ function preencherClientesOS() {
     });
 }
 
-function atualizarOrdens() {
+async function atualizarOrdens(dataInicio = "", dataFim = "") {
+    ordens = await apiRequest(`/ordens-servico${buildPeriodQuery(dataInicio, dataFim)}`);
+
     const lista = document.getElementById("listaOrdens");
     if (!lista) return;
 
     lista.innerHTML = "";
     ordens.forEach(ordem => {
+        const statusClass = ordem.status.toLowerCase().replace(/\s+/g, "-");
+        const podeAlterarStatus = ordem.status !== "Concluída" && ordem.status !== "Cancelada";
         const li = document.createElement("li");
-        li.className = `ordem-item status-${ordem.status.toLowerCase().replace(" ", "-")}`;
+        li.className = `ordem-item status-${statusClass}`;
         li.innerHTML = `
             <div class="ordem-numero">${ordem.numero}</div>
             <div class="ordem-detalhes">
@@ -320,45 +319,128 @@ function atualizarOrdens() {
                 <p><strong>Data:</strong> ${ordem.data}</p>
             </div>
             <div class="ordem-info">
-                <p><strong>Status:</strong> <span class="status-badge ${ordem.status.toLowerCase().replace(" ", "-")}">${ordem.status}</span></p>
-                <p><strong>Valor:</strong> R$ ${ordem.valor.toFixed(2)}</p>
+                <p><strong>Status:</strong> <span class="status-badge ${statusClass}">${ordem.status}</span></p>
+                <p><strong>Valor:</strong> ${formatCurrency(ordem.valor)}</p>
+                <div class="ordem-acoes">
+                    ${podeAlterarStatus ? `<button class="btn-acao btn-finalizar" onclick="finalizarOrdem(${ordem.id})">Finalizar</button>` : ""}
+                    ${podeAlterarStatus ? `<button class="btn-acao btn-cancelar" onclick="cancelarOrdem(${ordem.id})">Cancelar</button>` : ""}
+                    <button class="btn-acao btn-excluir" onclick="excluirOrdem(${ordem.id})">Excluir</button>
+                </div>
             </div>
         `;
         lista.appendChild(li);
     });
 }
 
-function adicionarOrdem() {
-    const numero = document.getElementById("numeroOS").value;
+async function finalizarOrdem(id) {
+    try {
+        await apiRequest(`/ordens-servico/${id}/finalizar`, { method: "POST", body: JSON.stringify({}) });
+        await atualizarOrdens();
+        await carregarDashboard();
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+async function cancelarOrdem(id) {
+    try {
+        await apiRequest(`/ordens-servico/${id}/cancelar`, { method: "POST", body: JSON.stringify({}) });
+        await atualizarOrdens();
+        await carregarDashboard();
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+async function excluirOrdem(id) {
+    if (!confirm("Deseja excluir esta ordem de serviço?")) {
+        return;
+    }
+
+    try {
+        await apiRequest(`/ordens-servico/${id}`, { method: "DELETE" });
+        await atualizarOrdens();
+        await atualizarRelatorioFinanceiro();
+        await carregarDashboard();
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+async function adicionarOrdem() {
     const cliente = document.getElementById("clienteOS").value;
-    const descricao = document.getElementById("descricaoOS").value;
+    const descricao = document.getElementById("descricaoOS").value.trim();
     const status = document.getElementById("statusOS").value;
-    const valor = parseFloat(document.getElementById("valorOS").value);
+    const valor = document.getElementById("valorOS").value;
     const data = document.getElementById("dataOS").value;
 
-    if (numero && cliente && descricao && status && valor && data) {
-        ordens.push({ 
-            numero, 
-            cliente, 
-            descricao, 
-            status, 
-            valor, 
-            data 
+    if (!cliente || !descricao || !status || !valor || !data) {
+        alert("Por favor, preencha todos os campos!");
+        return;
+    }
+
+    try {
+        await apiRequest("/ordens-servico", {
+            method: "POST",
+            body: JSON.stringify({
+                cliente,
+                descricao,
+                status,
+                valor: Number(valor),
+                data
+            })
         });
 
-        // Limpar formulário
         document.getElementById("descricaoOS").value = "";
         document.getElementById("statusOS").value = "Aberta";
         document.getElementById("valorOS").value = "";
         document.getElementById("dataOS").value = "";
         document.getElementById("clienteOS").value = "";
 
-        // Incrementar número para próxima OS
-        proximoNumeroOS++;
         gerarNumeroOS();
-
-        atualizarOrdens();
-    } else {
-        alert("Por favor, preencha todos os campos!");
+        await atualizarOrdens();
+        await atualizarRelatorioFinanceiro();
+    } catch (error) {
+        alert(error.message);
     }
 }
+
+function buildPeriodQuery(dataInicio, dataFim) {
+    const params = new URLSearchParams();
+    if (dataInicio) params.set("data_inicio", dataInicio);
+    if (dataFim) params.set("data_fim", dataFim);
+    const query = params.toString();
+    return query ? `?${query}` : "";
+}
+
+async function inicializarPainel() {
+    if (!localStorage.getItem("perfil")) {
+        window.location.href = "/login.html";
+        return;
+    }
+
+    try {
+        configurarPermissoes();
+        gerarNumeroOS();
+        await Promise.all([
+            carregarDashboard(),
+            atualizarClientes(),
+            atualizarOrdens(),
+            atualizarRelatorioFinanceiro()
+        ]);
+        preencherClientesOS();
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (isLoginPage()) {
+        if (localStorage.getItem("perfil")) {
+            window.location.href = "/";
+        }
+        return;
+    }
+
+    inicializarPainel();
+});
