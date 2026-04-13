@@ -1,0 +1,9 @@
+FROM registry.access.redhat.com/ubi10/nginx-126:latest
+
+EXPOSE 8080
+
+COPY --chown=1001:0 index.html login.html script.js style.css /tmp/src/
+
+RUN /usr/libexec/s2i/assemble
+
+CMD ["/usr/libexec/s2i/run"]

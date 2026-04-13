@@ -407,6 +407,40 @@ main {
     font-size: 13px;
 }
 
+.ordem-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.btn-acao {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-finalizar {
+    background-color: #10b981;
+}
+
+.btn-finalizar:hover {
+    background-color: #059669;
+}
+
+.btn-cancelar,
+.btn-excluir {
+    background-color: #dc2626;
+}
+
+.btn-cancelar:hover,
+.btn-excluir:hover {
+    background-color: #b91c1c;
+}
+
 .status-badge.aberta {
     background-color: #f59e0b;
 }
