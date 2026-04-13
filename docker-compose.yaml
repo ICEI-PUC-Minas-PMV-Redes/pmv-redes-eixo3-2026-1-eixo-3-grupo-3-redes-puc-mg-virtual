@@ -1,0 +1,64 @@
+services:
+  proxy:
+    image: traefik:v3.0
+    command:
+      - --providers.docker=true
+      - --providers.docker.endpoint=unix:///var/run/podman.sock
+      - --providers.docker.exposedbydefault=false
+      - --entrypoints.web.address=:8080
+    ports:
+      - "8080:8080"
+    volumes:
+      - ${XDG_RUNTIME_DIR}/podman/podman.sock:/var/run/podman.sock:ro
+
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_DATABASE: alphahard_admin
+      MARIADB_ROOT_PASSWORD: root
+    healthcheck:
+      test: ["CMD", "mariadb-admin", "ping", "-h", "127.0.0.1", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    volumes:
+      - mariadb_data:/var/lib/mysql
+      - ./codigo/servidor/src/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+  backend:
+    image: ghcr.io/icei-puc-minas-pmv-redes/pmv-redes-eixo3-2026-1-eixo-3-grupo-3-redes-puc-mg-virtual-backend:latest
+    build:
+      context: ./codigo/servidor
+      dockerfile: Containerfile
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      MARIADB_HOST: db
+      MARIADB_PORT: 3306
+      MARIADB_DATABASE: alphahard_admin
+      MARIADB_USER: root
+      MARIADB_PASSWORD: root
+      ADMIN_USERNAME: admin
+      ADMIN_PASSWORD: 1234
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.backend.rule=PathPrefix(`/api`)
+      - traefik.http.routers.backend.entrypoints=web
+      - traefik.http.routers.backend.priority=100
+      - traefik.http.services.backend.loadbalancer.server.port=8080
+
+  frontend:
+    image: ghcr.io/icei-puc-minas-pmv-redes/pmv-redes-eixo3-2026-1-eixo-3-grupo-3-redes-puc-mg-virtual-frontend:latest
+    build:
+      context: ./codigo/cliente
+      dockerfile: Containerfile
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.frontend.rule=PathPrefix(`/`)
+      - traefik.http.routers.frontend.entrypoints=web
+      - traefik.http.routers.frontend.priority=1
+      - traefik.http.services.frontend.loadbalancer.server.port=8080
+
+volumes:
+  mariadb_data:

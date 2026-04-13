@@ -1,45 +1,58 @@
 # Código do Servidor (Back-end)
 
-Esta pasta contém o código-fonte do lado servidor da solução.
+API REST em **Flask** com **MariaDB**, gerada a partir dos formularios do front-end em `codigo/cliente/`.
 
-## Organização
+## Estrutura
 
-Organize os arquivos conforme o tipo de solução desenvolvida:
-
-### Shell Scripts
-
-Se a solução utiliza shell scripts, organize-os aqui com nomes descritivos:
-
-```cmd
-servidor/
-├── scripts/
-│   ├── configurar-firewall.sh
-│   ├── monitorar-rede.sh
-│   └── backup-configuracao.sh
-└── README.md
-```
-
-### Back-end .NET / Outra Tecnologia
-
-Se a solução utiliza uma API ou serviço back-end, organize conforme a estrutura padrão da tecnologia:
-
-```cmd
+```text
 servidor/
 ├── src/
-│   └── (código-fonte)
-├── tests/
-│   └── (testes)
+│   ├── app.py         # Endpoints HTTP
+│   ├── config.py      # Configuracao da aplicacao
+│   ├── database.py    # Modelos, queries e inicializacao
+│   └── init.sql       # Estrutura inicial do banco
+├── requirements.txt
 └── README.md
 ```
 
-## Como Executar
+## Como executar
 
-*(Descreva aqui como executar o servidor localmente para desenvolvimento e testes.)*
+```bash
+cd codigo/servidor
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 
-## Variáveis de Ambiente
+export MARIADB_HOST=127.0.0.1
+export MARIADB_PORT=3306
+export MARIADB_DATABASE=alphahard_admin
+export MARIADB_USER=root
+export MARIADB_PASSWORD=root
 
-*(Liste as variáveis de ambiente necessárias, sem incluir valores reais de produção.)*
+python src/app.py
+```
+
+## Endpoints
+
+- `POST /api/auth/login`
+- `POST /api/auth/logout`
+- `GET /api/dashboard`
+- `GET/POST /api/clientes`
+- `GET/POST /api/ordens-servico`
+- `GET /api/financeiro/movimentacoes`
+- `GET /api/financeiro/resumo`
+- `POST /api/financeiro/despesas`
+- `POST /api/financeiro/receitas`
+
+## Variáveis de ambiente
 
 | Variável | Descrição | Exemplo |
 |----------|-----------|---------|
-| *(Variável)* | *(Descrição)* | *(Exemplo)* |
+| `DATABASE_URL` | URL completa do MariaDB | `mysql+pymysql://root:root@127.0.0.1:3306/alphahard_admin` |
+| `MARIADB_HOST` | Host do banco | `127.0.0.1` |
+| `MARIADB_PORT` | Porta do banco | `3306` |
+| `MARIADB_DATABASE` | Nome do banco | `alphahard_admin` |
+| `MARIADB_USER` | Usuário do banco | `root` |
+| `MARIADB_PASSWORD` | Senha do banco | `root` |
+| `ADMIN_USERNAME` | Usuário inicial | `admin` |
+| `ADMIN_PASSWORD` | Senha inicial | `1234` |
