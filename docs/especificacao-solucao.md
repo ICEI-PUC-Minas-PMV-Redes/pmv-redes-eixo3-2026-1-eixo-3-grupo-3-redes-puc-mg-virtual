@@ -6,7 +6,7 @@
 
 | Campo | Descrição |
 |-------|-----------|
-| **Nome da comunidade/organização** | *(Preencher)* |
+| **Nome da comunidade/organização** | Alpha Hard Informática |
 | **Tipo de organização** | *(ONG / Escola / Associação / Empresa / Órgão público / Outro)* |
 | **CNPJ (se aplicável)** | *(Preencher)* |
 | **Endereço completo** | *(Preencher)* |
@@ -71,7 +71,7 @@
 
 - [ ] Shell scripts para automação de tarefas de rede
 - [ ] Back-end com API (.NET / outra tecnologia)
-- [ ] Front-end web (HTML + CSS + JS)
+- [x] Front-end web (HTML + CSS + JS)
 - [ ] Aplicação móvel
 - [ ] Configuração de infraestrutura de rede
 - [ ] Outro: *(especificar)*
