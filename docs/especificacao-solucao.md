@@ -7,18 +7,28 @@
 | Campo | Descrição |
 |-------|-----------|
 | **Nome da comunidade/organização** | Alpha Hard Informática |
-| **Tipo de organização** | *(ONG / Escola / Associação / Empresa / Órgão público / Outro)* |
-| **CNPJ (se aplicável)** | *(Preencher)* |
-| **Endereço completo** | *(Preencher)* |
-| **Bairro / Cidade / UF** | *(Preencher)* |
-| **Responsável pelo contato** | *(Nome, cargo e setor)* |
-| **E-mail** | *(Preencher)* |
-| **Telefone** | *(Preencher)* |
-| **Data do primeiro contato** | *(dd/mm/aaaa)* |
+| **Tipo de organização** | Empresa |
+| **CNPJ (se aplicável)** | 35.986.726/0001-20 |
+| **Endereço completo** | Rua Pedro Maria Neto, 178 |
+| **Bairro / Cidade / UF** | Aterrado - Volta Redonda - RJ |
+| **Responsável pelo contato** | Marcus Paulo Araújo - Proprietário - Técnico |
+| **E-mail** | contato@alphahard.com |
+| **Telefone** | (24) 98111-1523 |
+| **Data do primeiro contato** | 10/02/2026 |
 
 ### 1.2 Contexto da Comunidade
 
-*(Descreva a comunidade parceira: qual é a sua missão/atuação, público atendido, quantidade de pessoas impactadas, infraestrutura atual de tecnologia e redes, principais desafios enfrentados na área de TI/redes.)*
+(Descreva a comunidade parceira: qual é a sua missão/atuação, público atendido, quantidade de pessoas impactadas, infraestrutura atual de tecnologia e redes, principais desafios enfrentados na área de TI/redes.)
+
+Prover soluções ágeis e especializadas em infraestrutura de hardware e conectividade, trabalhando com manutenção preventiva e corretiva de hardware (notebooks, desktops e impressoras), e fazendo implementação e gestão de redes cabeadas e Wi-Fi.
+
+Atende o público geral que procura por soluções de informática, de usuários domésticos a micro e pequenas empresas da região que dependem de uma rede e equipamentos funcionando.
+
+Diretamente estima-se um atendimento médio de 40-60 clientes por mês, indiretamente, ao manter diversas redes corporativas funcionando, o impacto pode chegar em centenas de pessoas.
+
+Atualmente, a infraestrutura é básica e descentralizada, não se faz uso de um software de gestão, partindo então para meios manuais (planilhas, blocos de notas ou mensagens de WhatsApp) para controle de clientes e registros financeiros, tem uma rede interna básica, apenas para testes, sem um servidor de arquivos ou sistema de chamados estruturado.
+
+A falta de infraestrutura própria na unidade, não tendo um sistema de Ordem de Serviço (OS), e uma ferramente de gestão para analisar redes.
 
 ### 1.3 Termo de Parceria
 
@@ -31,6 +41,12 @@
 ## 2. Problema Identificado
 
 *(Descreva detalhadamente o problema ou necessidade identificada na comunidade que está relacionada a redes de computadores. Seja específico: qual a situação atual? Quais as consequências do problema? Quem é afetado?)*
+
+Atualmente, a Alpha Hard opera em um modelo de fluxo de trabalho manual, não tendo uma infraestrutura de rede inteligente ou um sistema de gestão centralizado.
+
+A falta de um software e de uma rede estruturada acaba resultando em alguns problemas como: Inconsistência na ordem de serviço (OS), gestão corretiva de redes (Não consegue prever o problema), dificuldade de escalabilidade e vulnerabilidade de dados.
+
+A própria empresa, clientes B2B e B2C.
 
 ---
 
