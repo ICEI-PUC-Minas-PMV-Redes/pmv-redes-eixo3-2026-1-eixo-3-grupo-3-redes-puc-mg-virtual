@@ -56,45 +56,53 @@ A própria empresa, clientes B2B e B2C.
 
 *(Descreva a solução que o grupo propõe para resolver o problema identificado. Explique como ela atende às necessidades da comunidade.)*
 
+A solução que o grupo propõe é, o desenvolvimento e a implantação de um software de gerenciamento empresarial, acompanhado de um dashboard para visualização e acompanhamento dos registros, além de um banco de dados para o pleno armazenamento das informações da empresa, dos serviços e dos clientes, de forma segura.
+
+O sistema visa desde a parte técnica e operacional da empresa, permitindo a criação e o controle de Ordens de Serviço (OS), facilitando a organização dos atendimentos, até a área administrativa, como a geração de invoices mensais e relatórios financeiros, auxiliando no controle financeiro e administrativo do negócio.
+
 ### 3.2 Objetivos
 
 **Objetivo geral:**
 
 *(Descreva o objetivo geral do projeto.)*
 
+Implantação de um sistema de gerenciamento estruturado, capaz de entregar soluções na área técnica e administrativa da empresa, desenvolvendo uma infraestrutura tecnólogica onde a loja, a partir do sistema, seja capaz de fazer a gestão de ordens de serviço, gestão de clientes, gestão financeira e fiscal, e o monitoramente e gestão de redes.
+
 **Objetivos específicos:**
 
-1. *(Objetivo específico 1)*
-2. *(Objetivo específico 2)*
-3. *(Objetivo específico 3)*
-4. *(Adicionar mais se necessário)*
+1. Digitalização e Sistematização operacional.
+2. Gestão de Clientes e Inteligência de Negócio.
+3. Gestão Financeira e de Recursos.
 
 ### 3.3 Escopo da Solução
 
 *(Defina claramente o que faz parte do escopo do projeto e o que está fora do escopo.)*
 
 **Dentro do escopo:**
-- *(Item 1)*
-- *(Item 2)*
+- Sistema de Gestão de Ordens de Serviço (O.S.)
+- Gestão Financeira e Fiscal Integrada
 
 **Fora do escopo:**
-- *(Item 1)*
-- *(Item 2)*
+- E-commerce ou Venda Online
 
 ### 3.4 Tipo de Solução
 
 *(Marque as opções que se aplicam ao seu projeto:)*
 
 - [ ] Shell scripts para automação de tarefas de rede
-- [ ] Back-end com API (.NET / outra tecnologia)
+- [x] Back-end com API (.NET / outra tecnologia)
 - [x] Front-end web (HTML + CSS + JS)
 - [ ] Aplicação móvel
-- [ ] Configuração de infraestrutura de rede
+- [x] Configuração de infraestrutura de rede
 - [ ] Outro: *(especificar)*
 
 ### 3.5 Justificativa Técnica
 
 *(Justifique as escolhas tecnológicas feitas. Por que essas tecnologias são adequadas para a realidade da comunidade? Considere o nível técnico dos usuários, a infraestrutura disponível, a manutenibilidade da solução, etc.)*
+
+Essa stack é estratégica, pois equilibra alto poder de processamento, fazendo uso de Python, além da simplicidade de uso de um sistema que rodará localmente em computadores, tendo a familiariade e independência do JavaScript, HTML e CSS como interface web, rodando em qualquer computador da loja. O uso de Docker é o que garante a estabilidade técnica da loja, garantindo o isolamento, segurança e portabilidade do sistema.
+
+Por ser uma loja de informática, os proprietários possuem a base técnica para gerir o sistema sem muitas complicações, tendo capacidade até mesmo para fazer uma expansão dele, se necessário.
 
 ---
 
