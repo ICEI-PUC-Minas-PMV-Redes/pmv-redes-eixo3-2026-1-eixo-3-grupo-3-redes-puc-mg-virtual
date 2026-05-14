@@ -8,23 +8,23 @@
 
 | Campo | Descrição |
 |-------|-----------|
-| **Comunidade parceira** | *(Nome da organização/comunidade)* |
-| **Projeto desenvolvido** | *(Título do projeto)* |
-| **Período de execução** | *(Data início – Data fim)* |
-| **Número de pessoas diretamente impactadas** | *(Quantidade)* |
-| **Número de pessoas indiretamente impactadas** | *(Quantidade estimada)* |
+| **Comunidade parceira** | *(Alpha Hard Informática)* |
+| **Projeto desenvolvido** | *(Desenvolvimento do Sistema de Gerenciamento Estruturado )* |
+| **Período de execução** | *(09/02/2026 – 21/06/2026)* |
+| **Número de pessoas diretamente impactadas** | *(2)* |
+| **Número de pessoas indiretamente impactadas** | *(40-60 mensais)* |
 
 ---
 
 ## 2. Situação Anterior (Antes do Projeto)
 
-*(Descreva detalhadamente como era a situação da comunidade antes da intervenção do grupo. Quais eram os problemas, limitações e dificuldades enfrentadas em relação a redes de computadores e tecnologia?)*
+A loja operava seus serviços manualmente e por isso existiam diversos problemas. Pela falta de um sistema e de uma rede bem estruturada a loja encontrava inconsistências na OS e diversas dificuldades em manter a segurança dos dados.
 
 ---
 
 ## 3. Solução Implementada
 
-*(Resuma a solução que foi implementada. O que foi entregue? Quais tecnologias foram utilizadas? Como a solução funciona?)*
+*Desenvolvimento e implantação de software, dashboard para gerenciar e acompanhar registros, banco de dados para armazenar os dados com segurança, criação de controle da Ordem de Serviço (OS), conectividade da rede com segurança e uma plena conexão.* 
 
 ---
 
