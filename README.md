@@ -56,11 +56,11 @@
 
 *(Liste as tecnologias, linguagens e ferramentas usadas no projeto. Exemplos:)*
 
-- **Servidor/Back-end:** *(Ex: Shell scripts, .NET, Node.js, etc.)*
-- **Cliente/Front-end:** *(Ex: HTML + CSS + JS, aplicação móvel, etc.)*
-- **Infraestrutura:** *(Ex: Linux, Windows Server, Docker, etc.)*
-- **Rede:** *(Ex: Roteadores, switches, access points, etc.)*
-- **Outros:** *(Ex: GitHub, VS Code, etc.)*
+- **Servidor/Back-end:** *Python.*
+- **Cliente/Front-end:** *HTML, CSS, JavaScript.*
+- **Infraestrutura:** *Docker.*
+- **Rede:** *Roteadores.*
+- **Outros:** *GitHub, VS Code.*
 
 ---
 
