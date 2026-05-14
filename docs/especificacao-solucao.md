@@ -112,16 +112,16 @@ Por ser uma loja de informática, os proprietários possuem a base técnica para
 
 | ID | Descrição | Prioridade |
 |----|-----------|------------|
-| RF01 | *(Descrição do requisito)* | Alta / Média / Baixa |
-| RF02 | *(Descrição do requisito)* | Alta / Média / Baixa |
-| RF03 | *(Descrição do requisito)* | Alta / Média / Baixa |
+| RF01 | *Gestão de Ordens de Serviço (O.S.)* | Alta |
+| RF02 | *Controle de Status de Serviço* | Média |
+| RF03 | *Fluxo de Caixa Básico* | Baixa |
 
 ### 4.2 Requisitos Não Funcionais
 
 | ID | Descrição | Categoria |
 |----|-----------|-----------|
-| RNF01 | *(Descrição do requisito)* | *(Desempenho / Segurança / Usabilidade / Disponibilidade / Outro)* |
-| RNF02 | *(Descrição do requisito)* | *(Categoria)* |
+| RNF01 | *Operação Local (Offline)* | *Disponibilidade* |
+| RNF02 | *Autenticação* | *Segurança* |
 
 ---
 
