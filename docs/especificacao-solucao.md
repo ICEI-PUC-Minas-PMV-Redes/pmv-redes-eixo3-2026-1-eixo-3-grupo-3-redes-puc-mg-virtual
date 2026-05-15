@@ -129,6 +129,44 @@ Por ser uma loja de informática, os proprietários possuem a base técnica para
 
 *(Descreva a arquitetura geral da solução. Pode incluir diagrama de rede, diagrama de componentes, ou descrição textual da topologia. Inclua imagens na pasta `docs/prototipos/` e referencie-as aqui.)*
 
+O sistema foi projetado e focado no uso local para uma equipe pequena, a arquitetura prioriza a estabilidade e a facilidade de implantação em vez de uma escalabilidade complexa de nuvem.
+
+Os detalhes que compõem a solução são:
+
+1. Infraestrutura e Implantação (Docker)
+
+A base do sistema é a Conteinerização. O sistema não é instalado diretamente no Windows, mas sim encapsulado em uma imagem Docker.
+
+- Isolamento: O ambiente Python e todas as dependências ficam isolados.
+- Persistência: Os dados são armazenados em volumes Docker.
+
+2. Interface e Experiência (Front-End)
+
+O Front-End foi construído em HTML, CSS e JavaScript.
+
+- Interface Web Local: O técnico acessa o sistema através de um navegador.
+- Estilização: O CSS garante uma interface limpa.
+
+3. Servidor (Back-End)
+
+O Back-End foi construído em Python utilizando framework Flask.
+
+- Servidor de Aplicação: O Python processa as requisições enviadas pelo navegador, executa a lógica de cálculo financeiro, valida regras de estoque e gerencia a autenticação.
+
+4. Banco de dados
+
+Para a realidade da Alpha Hard (até 2 funcionários e uso local), tem muitas escolhas de banco de dados, na solução foi usado o MariaDB.
+
+- Operação: Possui alto desempenho em consultas, é seguro e constantemente atualizado.
+
+5. Fluxo de dados
+
+- Entrada: O técnico preenche os dados no navegador (Front-end).
+
+- Processamento: O navegador envia um JSON para o Python (Back-end).
+
+- Armazenamento: O Python valida os dados e os grava no banco de dados.
+
 ---
 
 ## 6. Cronograma do Projeto
