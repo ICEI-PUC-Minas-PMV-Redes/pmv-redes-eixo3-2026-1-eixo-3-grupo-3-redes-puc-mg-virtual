@@ -18,13 +18,13 @@
 
 ## 2. Situação Anterior (Antes do Projeto)
 
-A loja operava seus serviços manualmente e por isso existiam diversos problemas. Pela falta de um sistema e de uma rede bem estruturada a loja encontrava inconsistências na OS e diversas dificuldades em manter a segurança dos dados além da dificuldade na organização e busca de informações específicas de clientes e servicos.
+A loja operava seus serviços manualmente e por isso existiam diversos problemas. Pela falta de um sistema e de uma rede bem estruturada a loja encontrava inconsistências na OS e diversas dificuldades em manter a segurança dos dados além da dificuldade na organização e busca de informações específicas de clientes e serviços.
 
 ---
 
 ## 3. Solução Implementada
 
-*Desenvolvimento e implantação de software, dashboard para gerenciar e acompanhar registros, banco de dados para armazenar os dados com segurança, criação de controle da Ordem de Serviço (OS), conectividade da rede com segurança e uma plena conexão.* 
+*Desenvolvimento e implantação de software desenvolvido para o gerenciamento integrado das operações da loja. Sistema de gerenciamento unindo a robustez do Python no backend com uma interface web moderna e intuitiva no frontend. Dashboard para gerenciar e acompanhar registros e atendimentos em tempo real. Banco de dados para armazenar os dados com segurança. Criação de controle da Ordem de Serviço (OS) eliminando inconsistências do processo manual, conectividade da rede com segurança e uma plena conexão.* 
 
 ---
 
