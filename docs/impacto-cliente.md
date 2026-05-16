@@ -30,7 +30,7 @@ A loja operava seus serviços manualmente e por isso existiam diversos problemas
 
 ## 4. Situação Posterior (Após o Projeto)
 
-*(Após a implementação da solução, a Alpha Hard Informática passou a operar
+*Após a implementação da solução, a Alpha Hard Informática passou a operar
 com processos digitais estruturados, substituindo integralmente o controle
 por planilhas Excel. Os dois responsáveis pelo atendimento
 passaram a utilizar o sistema para registro e consulta de informações de
@@ -44,7 +44,7 @@ os relatórios financeiros são gerados automaticamente, eliminando
 o trabalho manual de consolidação de dados.
 A infraestrutura de rede estruturada permitiu que o sistema fosse acessado
 com segurança pelos usuários do estabelecimento, garantindo disponibilidade
-e integridade dos dados armazenados.)*
+e integridade dos dados armazenados.*
 
 ---
 
@@ -56,9 +56,9 @@ e integridade dos dados armazenados.)*
 
 | Aspecto | Impacto Observado |
 |---------|-------------------|
-| *(Eficiência operacional)* | *(Redução significativa do tempo gasto no registro e consulta de informações, com acesso imediato ao histórico de qualquer cliente ou OS pelo sistema de busca integrado.)* |
-| *(Controle financeiro)* | *(Geração automatizada das faturas mensais e relatórios financeiros proporciona visibilidade clara do faturamento e facilita a tomada de decisões administrativas.)* |
-| *(Segurança e rastreabilidade)* | *(Banco de dados estruturado garante armazenamento seguro das informações, com histórico auditável de todos os atendimentos.)* |
+| *Eficiência operacional* | *Redução significativa do tempo gasto no registro e consulta de informações, com acesso imediato ao histórico de qualquer cliente ou OS pelo sistema de busca integrado.* |
+| *Controle financeiro* | *Geração automatizada das faturas mensais e relatórios financeiros proporciona visibilidade clara do faturamento e facilita a tomada de decisões administrativas.* |
+| *Segurança e rastreabilidade* | *Banco de dados estruturado garante armazenamento seguro das informações, com histórico auditável de todos os atendimentos.* |
 
 ### 5.2 Limitações e Pontos de Melhoria
 
