@@ -100,7 +100,7 @@ Implantação de um sistema de gerenciamento estruturado, capaz de entregar solu
 
 *(Justifique as escolhas tecnológicas feitas. Por que essas tecnologias são adequadas para a realidade da comunidade? Considere o nível técnico dos usuários, a infraestrutura disponível, a manutenibilidade da solução, etc.)*
 
-Essa stack é estratégica, pois equilibra alto poder de processamento, fazendo uso de Python, além da simplicidade de uso de um sistema que rodará localmente em computadores, tendo a familiariade e independência do JavaScript, HTML e CSS como interface web, rodando em qualquer computador da loja. O uso de Docker é o que garante a estabilidade técnica da loja, garantindo o isolamento, segurança e portabilidade do sistema.
+Essa stack foi escolhida porque equilibra alto poder de processamento, fazendo uso de Python, tendo familiaridade e autonomia com JavaScript, HTML e CSS como interface web, rodando em qualquer computador da loja. O uso de Docker é o que garante a estabilidade técnica da loja, garantindo o isolamento, segurança e portabilidade do sistema.
 
 Por ser uma loja de informática, os proprietários possuem a base técnica para gerir o sistema sem muitas complicações, tendo capacidade até mesmo para fazer uma expansão dele, se necessário.
 
@@ -173,13 +173,13 @@ Para a realidade da Alpha Hard (até 2 funcionários e uso local), tem muitas es
 
 | Atividade | Responsável | Início | Fim | Status |
 |-----------|-------------|--------|-----|--------|
-| Levantamento de requisitos | *(Nome)* | *(Data)* | *(Data)* | *(Pendente/Em andamento/Concluído)* |
-| Prototipação | *(Nome)* | *(Data)* | *(Data)* | *(Status)* |
-| Desenvolvimento do servidor | *(Nome)* | *(Data)* | *(Data)* | *(Status)* |
-| Desenvolvimento do cliente | *(Nome)* | *(Data)* | *(Data)* | *(Status)* |
-| Testes | *(Nome)* | *(Data)* | *(Data)* | *(Status)* |
-| Documentação | *(Nome)* | *(Data)* | *(Data)* | *(Status)* |
-| Apresentação | *(Nome)* | *(Data)* | *(Data)* | *(Status)* |
+| Levantamento de requisitos | *Thiago Hideki, Talita Rosalina, Luis Augusto* | *10/02* | *24/02* | *Concluído* |
+| Prototipação | *Luis Augusto, Talita Rosalina, Thiago Hideki* | *24/02* | *09/03* | *Concluído* |
+| Desenvolvimento do servidor | *Leonardo Silva* | *10/03* | *12/04* | *Concluído* |
+| Desenvolvimento do cliente | *Luis Felipe* | *13/04* | *17/05* | *Concluído* |
+| Testes | *Todos* | *10/03* | *21/06* | *Em andamento* |
+| Documentação | *Todos* | *10/02* | *21/06* | *Em andamento* |
+| Apresentação para comunidade | *Todos* | *08/06* | *21/06* | *Pendente* |
 
 ---
 
