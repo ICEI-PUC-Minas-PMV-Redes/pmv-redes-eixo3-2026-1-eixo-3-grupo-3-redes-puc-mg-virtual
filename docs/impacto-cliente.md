@@ -57,7 +57,7 @@ e integridade dos dados armazenados.)*
 | Aspecto | Impacto Observado |
 |---------|-------------------|
 | *(Eficiência operacional)* | *(Redução significativa do tempo gasto no registro e consulta de informações, com acesso imediato ao histórico de qualquer cliente ou OS pelo sistema de busca integrado.)* |
-| *(Controle financeiro)* | *(Geração automatizada de invoices mensais e relatórios financeiros proporciona visibilidade clara do faturamento e facilita a tomada de decisões administrativas.)* |
+| *(Controle financeiro)* | *(Geração automatizada das faturas mensais e relatórios financeiros proporciona visibilidade clara do faturamento e facilita a tomada de decisões administrativas.)* |
 | *(Segurança e rastreabilidade)* | *(Banco de dados estruturado garante armazenamento seguro das informações, com histórico auditável de todos os atendimentos.)* |
 
 ### 5.2 Limitações e Pontos de Melhoria
