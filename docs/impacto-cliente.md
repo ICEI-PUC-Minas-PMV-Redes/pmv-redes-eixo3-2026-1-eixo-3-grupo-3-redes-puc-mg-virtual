@@ -24,7 +24,7 @@ A loja operava seus serviços manualmente e por isso existiam diversos problemas
 
 ## 3. Solução Implementada
 
-*Desenvolvimento e implantação de software desenvolvido para o gerenciamento integrado das operações da loja. Sistema de gerenciamento unindo a robustez do Python no backend com uma interface web moderna e intuitiva no frontend. Dashboard para gerenciar e acompanhar registros e atendimentos em tempo real. Banco de dados para armazenar os dados com segurança. Criação de controle da Ordem de Serviço (OS) eliminando inconsistências do processo manual, conectividade da rede com segurança e uma plena conexão.* 
+*Desenvolvimento e implantação de software desenvolvido para o gerenciamento integrado das operações da loja. Dashboard para gerenciar e acompanhar registros e atendimentos em tempo real. Banco de dados para armazenar os dados com segurança. Criação de controle da Ordem de Serviço (OS) eliminando inconsistências do processo manual, conectividade da rede com segurança e uma plena conexão.* 
 
 ---
 
@@ -59,10 +59,23 @@ e integridade dos dados armazenados.*
 | *Eficiência operacional* | *Redução significativa do tempo gasto no registro e consulta de informações, com acesso imediato ao histórico de qualquer cliente ou OS pelo sistema de busca integrado.* |
 | *Controle financeiro* | *Geração automatizada das faturas mensais e relatórios financeiros proporciona visibilidade clara do faturamento e facilita a tomada de decisões administrativas.* |
 | *Segurança e rastreabilidade* | *Banco de dados estruturado garante armazenamento seguro das informações, com histórico auditável de todos os atendimentos.* |
+| *Gestão de Ordens de Serviço*|*A padronização e o controle das OS eliminam inconsistências do processo manual, melhoram a comunicação com os clientes sobre o status dos reparos e reduzem erros operacionais.*|
+| *Conectividade e Infraestrutura*|*A rede estruturada e segura suporta o funcionamento do sistema e melhora a comunicação interna, eliminando vulnerabilidades da configuração anterior.*|
+| *Capacitação Tecnológica*|*Os dois responsáveis pelo atendimento foram capacitados para operar o novo sistema, ampliando suas competências digitais e reduzindo a dependência de processos manuais.*|
+| *Impacto nos Clientes*|*Os 40 a 60 clientes mensais passam a ter seus dados gerenciados com mais precisão, com possibilidade de consulta ao histórico de serviços e maior transparência no processo de atendimento.*|
+
 
 ### 5.2 Limitações e Pontos de Melhoria
 
-*(Identifique limitações da solução implementada e sugestões de melhoria futura.)*
+*Apesar dos avanços obtidos, algumas limitações foram identificadas na solução implementada:
+
+Ambiente Local: O sistema foi desenvolvido para ambiente local, sem acesso remoto via internet, o que limita a consulta de informações fora do estabelecimento. Uma evolução futura poderia incluir o acesso via nuvem ou VPN segura.
+
+Notificações: Não há um módulo de notificação automática para clientes sobre o status de reparos; a implementação de alertas por SMS ou e-mail seria um diferencial de atendimento.
+
+Rotina de Backup: O backup dos dados depende de procedimento manual; recomenda-se implementar uma rotina automatizada de backup para prevenir a perda de informações.
+
+Gestão Fiscal: A solução não contempla integração com sistemas de emissão de Nota Fiscal Eletrônica (NF-e), o que seria um complemento relevante para a gestão fiscal da empresa.*
 
 ### 5.3 Sustentabilidade da Solução
 
