@@ -187,5 +187,5 @@ Para a realidade da Alpha Hard (até 2 funcionários e uso local), tem muitas es
 
 | Risco | Probabilidade | Impacto | Mitigação |
 |-------|--------------|---------|-----------|
-| *(Descrição do risco)* | Alta / Média / Baixa | Alto / Médio / Baixo | *(Ação de mitigação)* |
-| *(Descrição do risco)* | *(Prob.)* | *(Imp.)* | *(Mitigação)* |
+| *Infecção de malware na rede* | *Baixa* | *Alto* | *O computador que hospeda o sistema de gestão deve ficar em uma rede administrativa isolada.* |
+| *O não uso da aplicação (Retorno ao Papel)* | *Média* | *Alto* | *Focar na simplicidade da operação, o sistema deve exigir poucos cliques para abrir uma O.S.* |
