@@ -18,7 +18,7 @@
 
 ## 2. Situação Anterior (Antes do Projeto)
 
-A loja operava seus serviços manualmente e por isso existiam diversos problemas. Pela falta de um sistema e de uma rede bem estruturada a loja encontrava inconsistências na OS e diversas dificuldades em manter a segurança dos dados.
+A loja operava seus serviços manualmente e por isso existiam diversos problemas. Pela falta de um sistema e de uma rede bem estruturada a loja encontrava inconsistências na OS e diversas dificuldades em manter a segurança dos dados além da dificuldade na organização e busca de informações específicas de clientes e servicos.
 
 ---
 
@@ -30,7 +30,21 @@ A loja operava seus serviços manualmente e por isso existiam diversos problemas
 
 ## 4. Situação Posterior (Após o Projeto)
 
-*(Descreva como ficou a situação da comunidade após a implementação da solução. Quais melhorias foram observadas? O que mudou na rotina dos usuários?)*
+*(Após a implementação da solução, a Alpha Hard Informática passou a operar
+com processos digitais estruturados, substituindo integralmente o controle
+por planilhas Excel. Os dois responsáveis pelo atendimento
+passaram a utilizar o sistema para registro e consulta de informações de
+clientes, abertura e acompanhamento de Ordens de Serviço e geração de
+relatórios financeiros.
+A rotina de atendimento foi simplificada pois ao receber um equipamento para
+reparo, o técnico registra a OS no sistema que automaticamente vincula o
+serviço ao histórico do cliente, permitindo consulta rápida de atendimentos
+anteriores e facilitando o acompanhamento de garantias. Ao final do mês,
+os relatórios financeiros são gerados automaticamente, eliminando
+o trabalho manual de consolidação de dados.
+A infraestrutura de rede estruturada permitiu que o sistema fosse acessado
+com segurança pelos usuários do estabelecimento, garantindo disponibilidade
+e integridade dos dados armazenados.)*
 
 ---
 
@@ -42,9 +56,9 @@ A loja operava seus serviços manualmente e por isso existiam diversos problemas
 
 | Aspecto | Impacto Observado |
 |---------|-------------------|
-| *(Ex: Conectividade)* | *(Descrição do impacto)* |
-| *(Ex: Eficiência operacional)* | *(Descrição do impacto)* |
-| *(Ex: Capacitação tecnológica)* | *(Descrição do impacto)* |
+| *(Eficiência operacional)* | *(Redução significativa do tempo gasto no registro e consulta de informações, com acesso imediato ao histórico de qualquer cliente ou OS pelo sistema de busca integrado.)* |
+| *(Controle financeiro)* | *(Geração automatizada de invoices mensais e relatórios financeiros proporciona visibilidade clara do faturamento e facilita a tomada de decisões administrativas.)* |
+| *(Segurança e rastreabilidade)* | *(Banco de dados estruturado garante armazenamento seguro das informações, com histórico auditável de todos os atendimentos.)* |
 
 ### 5.2 Limitações e Pontos de Melhoria
 
