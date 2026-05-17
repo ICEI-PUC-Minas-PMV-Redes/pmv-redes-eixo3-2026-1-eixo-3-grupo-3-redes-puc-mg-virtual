@@ -18,8 +18,6 @@
 
 ### 1.2 Contexto da Comunidade
 
-(Descreva a comunidade parceira: qual é a sua missão/atuação, público atendido, quantidade de pessoas impactadas, infraestrutura atual de tecnologia e redes, principais desafios enfrentados na área de TI/redes.)
-
 Prover soluções ágeis e especializadas em infraestrutura de hardware e conectividade, trabalhando com manutenção preventiva e corretiva de hardware (notebooks, desktops e impressoras), e fazendo implementação e gestão de redes cabeadas e Wi-Fi.
 
 Atende o público geral que procura por soluções de informática, de usuários domésticos a micro e pequenas empresas da região que dependem de uma rede e equipamentos funcionando.
@@ -28,33 +26,27 @@ Diretamente estima-se um atendimento médio de 40-60 clientes por mês, indireta
 
 Atualmente, a infraestrutura é básica e descentralizada, não se faz uso de um software de gestão, partindo então para meios manuais (planilhas, blocos de notas ou mensagens de WhatsApp) para controle de clientes e registros financeiros, tem uma rede interna básica, apenas para testes, sem um servidor de arquivos ou sistema de chamados estruturado.
 
-A falta de infraestrutura própria na unidade, não tendo um sistema de Ordem de Serviço (OS), e uma ferramente de gestão para analisar redes.
+O principal desafio da empresa é a falta de infraestrutura própria na unidade, não tendo um sistema de Ordem de Serviço (OS), e uma ferramente de gestão para analisar redes.
 
 ### 1.3 Termo de Parceria
 
-*(Indique se o termo de parceria foi assinado e onde está arquivado. O documento escaneado/fotografado deve ser incluído na pasta `evidencias/termos/`.)*
-
-- [ ] Termo de parceria assinado e arquivado em `evidencias/termos/`
+- [x] Termo de parceria assinado e arquivado em `evidencias/termos/`
 
 ---
 
 ## 2. Problema Identificado
 
-*(Descreva detalhadamente o problema ou necessidade identificada na comunidade que está relacionada a redes de computadores. Seja específico: qual a situação atual? Quais as consequências do problema? Quem é afetado?)*
-
 Atualmente, a Alpha Hard opera em um modelo de fluxo de trabalho manual, não tendo uma infraestrutura de rede inteligente ou um sistema de gestão centralizado.
 
-A falta de um software e de uma rede estruturada acaba resultando em alguns problemas como: Inconsistência na ordem de serviço (OS), gestão corretiva de redes (Não consegue prever o problema), dificuldade de escalabilidade e vulnerabilidade de dados.
+A falta de um software e de uma rede estruturada acaba resultando em alguns problemas como: Inconsistência na ordem de serviço (OS), gestão corretiva de redes (Não consegue prever o problema), falta de relatórios financeiros e vulnerabilidade de dados.
 
-A própria empresa, clientes B2B e B2C.
+Aqueles afetados são a própria empresa, e clientes B2B e B2C.
 
 ---
 
 ## 3. Solução Proposta
 
 ### 3.1 Descrição Geral
-
-*(Descreva a solução que o grupo propõe para resolver o problema identificado. Explique como ela atende às necessidades da comunidade.)*
 
 A solução que o grupo propõe é, o desenvolvimento e a implantação de um software de gerenciamento empresarial, acompanhado de um dashboard para visualização e acompanhamento dos registros, além de um banco de dados para o pleno armazenamento das informações da empresa, dos serviços e dos clientes, de forma segura.
 
@@ -63,8 +55,6 @@ O sistema visa desde a parte técnica e operacional da empresa, permitindo a cri
 ### 3.2 Objetivos
 
 **Objetivo geral:**
-
-*(Descreva o objetivo geral do projeto.)*
 
 Implantação de um sistema de gerenciamento estruturado, capaz de entregar soluções na área técnica e administrativa da empresa, desenvolvendo uma infraestrutura tecnólogica onde a loja, a partir do sistema, seja capaz de fazer a gestão de ordens de serviço, gestão de clientes, gestão financeira e fiscal, e o monitoramente e gestão de redes.
 
@@ -76,8 +66,6 @@ Implantação de um sistema de gerenciamento estruturado, capaz de entregar solu
 
 ### 3.3 Escopo da Solução
 
-*(Defina claramente o que faz parte do escopo do projeto e o que está fora do escopo.)*
-
 **Dentro do escopo:**
 - Sistema de Gestão de Ordens de Serviço (O.S.)
 - Gestão Financeira e Fiscal Integrada
@@ -87,18 +75,14 @@ Implantação de um sistema de gerenciamento estruturado, capaz de entregar solu
 
 ### 3.4 Tipo de Solução
 
-*(Marque as opções que se aplicam ao seu projeto:)*
-
 - [ ] Shell scripts para automação de tarefas de rede
 - [x] Back-end com API (.NET / outra tecnologia)
 - [x] Front-end web (HTML + CSS + JS)
 - [ ] Aplicação móvel
 - [x] Configuração de infraestrutura de rede
-- [ ] Outro: *(especificar)*
+- [x] Docker
 
 ### 3.5 Justificativa Técnica
-
-*(Justifique as escolhas tecnológicas feitas. Por que essas tecnologias são adequadas para a realidade da comunidade? Considere o nível técnico dos usuários, a infraestrutura disponível, a manutenibilidade da solução, etc.)*
 
 Essa stack foi escolhida porque equilibra alto poder de processamento, fazendo uso de Python, tendo familiaridade e autonomia com JavaScript, HTML e CSS como interface web, rodando em qualquer computador da loja. O uso de Docker é o que garante a estabilidade técnica da loja, garantindo o isolamento, segurança e portabilidade do sistema.
 
@@ -126,8 +110,6 @@ Por ser uma loja de informática, os proprietários possuem a base técnica para
 ---
 
 ## 5. Arquitetura da Solução
-
-*(Descreva a arquitetura geral da solução. Pode incluir diagrama de rede, diagrama de componentes, ou descrição textual da topologia. Inclua imagens na pasta `docs/prototipos/` e referencie-as aqui.)*
 
 O sistema foi projetado e focado no uso local para uma equipe pequena, a arquitetura prioriza a estabilidade e a facilidade de implantação em vez de uma escalabilidade complexa de nuvem.
 
@@ -179,7 +161,7 @@ Para a realidade da Alpha Hard (até 2 funcionários e uso local), tem muitas es
 | Desenvolvimento do cliente | *Luis Felipe* | *13/04* | *17/05* | *Concluído* |
 | Testes | *Todos* | *10/03* | *21/06* | *Em andamento* |
 | Documentação | *Todos* | *10/02* | *21/06* | *Em andamento* |
-| Apresentação para comunidade | *Todos* | *08/06* | *21/06* | *Pendente* |
+| Apresentação para comunidade | *Todos* | *08/06* | *21/06* | *Em andamento* |
 
 ---
 
