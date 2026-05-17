@@ -14,7 +14,7 @@
 | **Eixo** | 3 |
 | **Semestre/Ano** | *01/2026*  |
 | **Professor(a) orientador(a)** | *Harison Herman Silva* |
-| **Carga horária de extensão** | * 320 horas* |
+| **Carga horária de extensão** | *320 horas* |
 
 ---
 
@@ -187,10 +187,10 @@ A atividade extensionista reforçou a importância da integração entre univers
 
 | Data | Tipo de Interação | Participantes | Descrição | Evidência |
 |------|-------------------|---------------|-----------|-----------|
-| *10/02/2026* | *Reunião inicial* | *Equipe do projeto e Marcus Paulo Araújo* | *Apresentação do projeto e levantamento preliminar das necessidades da empresa* | *(Referência a foto/ata em evidencias/)* |
-| *24/02/2026* | *Reunião técnica* | *Equipe do projeto e representante da empresa* | *Validação dos requisitos funcionais e definição do escopo da solução* | ** |
-| *23/03/2026* | *Capacitação*| *Equipe do projeto e colaboradores da empresa* | *Treinamento para utilização das funcionalidades do sistema* | ** |
-| *08/06/2026* | *Apresentação final*| *Equipe do projeto e comunidade parceira* | *Demonstração da solução implementada e validação final do projeto* | ** |
+| *10/02/2026* | *Reunião inicial* | *Equipe do projeto e Marcus Paulo Araújo* | *Apresentação do projeto e levantamento preliminar das necessidades da empresa* | `evidencias/termos` |
+| *24/02/2026* | *Reunião técnica* | *Equipe do projeto e representante da empresa* | *Validação dos requisitos funcionais e definição do escopo da solução* | `evidencias/atas/` |
+| *23/03/2026* | *Capacitação*| *Equipe do projeto e colaboradores da empresa* | *Treinamento para utilização das funcionalidades do sistema* | `evidencias/fotos/` |
+| *08/06/2026* | *Apresentação final*| *Equipe do projeto e comunidade parceira* | *Demonstração da solução implementada e validação final do projeto* |  |
 
 ---
 
