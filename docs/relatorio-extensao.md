@@ -45,7 +45,7 @@
 
 ## 4. Resumo da Atividade
 
-*(O projeto extensionista foi desenvolvido em parceria com a empresa Alpha Hard Informática, sediada em Volta Redonda/RJ, com o propósito de atender às demandas relacionadas à ausência de um sistema estruturado de gerenciamento e de uma infraestrutura tecnológica adequada para suporte às operações da organização.
+*O projeto extensionista foi desenvolvido em parceria com a empresa Alpha Hard Informática, sediada em Volta Redonda/RJ, com o propósito de atender às demandas relacionadas à ausência de um sistema estruturado de gerenciamento e de uma infraestrutura tecnológica adequada para suporte às operações da organização.
 
 Antes da implementação da solução, os processos internos eram executados de forma manual, utilizando planilhas eletrônicas, anotações informais e aplicativos de mensagens, o que ocasionava inconsistências no controle das Ordens de Serviço (OS), dificuldades na organização das informações, baixa rastreabilidade dos atendimentos e limitações nos processos administrativos e financeiros.
 
@@ -77,7 +77,7 @@ Desenvolver um sistema web para gerenciamento de clientes, Ordens de Serviço, c
 
 ## 6. Fundamentação Teórica
 
-*O desenvolvimento do projeto fundamentou-se em conceitos relacionados à engenharia de software, desenvolvimento de aplicações web, infraestrutura computacional e gerenciamento de redes, contemplando práticas voltadas à construção de soluções tecnológicas voltadas para ambientes corporativos de pequeno porte.
+O desenvolvimento do projeto fundamentou-se em conceitos relacionados à engenharia de software, desenvolvimento de aplicações web, infraestrutura computacional e gerenciamento de redes, contemplando práticas voltadas à construção de soluções tecnológicas voltadas para ambientes corporativos de pequeno porte.
 
 A arquitetura da solução foi baseada no modelo cliente-servidor, amplamente utilizado em aplicações web devido à sua eficiência na separação entre interface de usuário, lógica de negócio e persistência de dados. Para o desenvolvimento do sistema, foi utilizado o framework Flask, escrito em Python, escolhido por sua flexibilidade, leveza e facilidade de integração com diferentes serviços e bibliotecas.
 
@@ -87,13 +87,13 @@ O armazenamento e gerenciamento das informações foram realizados por meio do b
 
 Também foram aplicados conceitos relacionados à segurança da informação, autenticação de usuários, persistência de dados, controle de acesso e organização de processos empresariais informatizados, buscando assegurar maior confiabilidade operacional e proteção das informações manipuladas pela empresa.
 
-Os conhecimentos desenvolvidos ao longo da disciplina contribuíram significativamente para a compreensão dos processos de integração entre sistemas, administração de serviços em rede, disponibilidade computacional e boas práticas de desenvolvimento e implantação de soluções tecnológicas voltadas às demandas reais da comunidade parceira.*
+Os conhecimentos desenvolvidos ao longo da disciplina contribuíram significativamente para a compreensão dos processos de integração entre sistemas, administração de serviços em rede, disponibilidade computacional e boas práticas de desenvolvimento e implantação de soluções tecnológicas voltadas às demandas reais da comunidade parceira.
 
 ---
 
 ## 7. Metodologia
 
-*O projeto foi desenvolvido por meio de uma abordagem incremental, colaborativa e orientada à resolução de problemas reais identificados na comunidade parceira.
+O projeto foi desenvolvido por meio de uma abordagem incremental, colaborativa e orientada à resolução de problemas reais identificados na comunidade parceira.
 
 Inicialmente, foram realizadas reuniões técnicas com os responsáveis pela Alpha Hard Informática com o objetivo de compreender o funcionamento dos processos internos da empresa, identificar as principais dificuldades operacionais e levantar os requisitos funcionais e não funcionais da solução proposta.
 
@@ -105,7 +105,7 @@ Durante todo o desenvolvimento, foram executados testes contínuos para validaç
 
 Ao final do projeto, foram realizadas atividades de treinamento e orientação junto à comunidade parceira, permitindo a correta utilização da plataforma e promovendo maior autonomia operacional aos usuários responsáveis pela gestão do sistema.
 
-Além das atividades técnicas, também foram produzidas documentações funcionais e técnicas da solução desenvolvida, registrando a estrutura da aplicação, funcionalidades implementadas e procedimentos operacionais necessários para manutenção e utilização do sistema.*
+Além das atividades técnicas, também foram produzidas documentações funcionais e técnicas da solução desenvolvida, registrando a estrutura da aplicação, funcionalidades implementadas e procedimentos operacionais necessários para manutenção e utilização do sistema.
 
 ---
 
@@ -126,59 +126,65 @@ Além das atividades técnicas, também foram produzidas documentações funcion
 
 ## 9. Resultados Alcançados
 
-*O projeto extensionista proporcionou melhorias significativas para a Alpha Hard Informática, especialmente nos processos de organização operacional, gerenciamento de serviços e controle administrativo e financeiro.
+O projeto extensionista proporcionou melhorias significativas para a Alpha Hard Informática, especialmente nos processos de organização operacional, gerenciamento de serviços e controle administrativo e financeiro.
 
-A implementação da solução permitiu maior centralização das informações, redução de falhas operacionais decorrentes de controles manuais e aprimoramento do fluxo de atendimento aos clientes da empresa.*
+A implementação da solução permitiu maior centralização das informações, redução de falhas operacionais decorrentes de controles manuais e aprimoramento do fluxo de atendimento aos clientes da empresa.
 
 ### 9.1 Resultados Técnicos
 
-*- Desenvolvimento de um sistema web integrado para gerenciamento de Ordens de Serviço e cadastro de clientes.
+*
+- Desenvolvimento de um sistema web integrado para gerenciamento de Ordens de Serviço e cadastro de clientes.
 - Implementação de dashboard administrativo para acompanhamento operacional e financeiro.
 - Estruturação de banco de dados relacional utilizando MariaDB, garantindo maior integridade e organização das informações.
 - Implantação da solução em ambiente conteinerizado utilizando Docker.
 - Melhoria da infraestrutura computacional e da organização dos serviços internos da empresa.
-- Aumento da segurança e confiabilidade no armazenamento dos dados operacionais.*
+- Aumento da segurança e confiabilidade no armazenamento dos dados operacionais.
+*
 
 ### 9.2 Resultados para a Comunidade
 
-*- Redução do tempo necessário para localização e gerenciamento das informações dos clientes.
+*
+- Redução do tempo necessário para localização e gerenciamento das informações dos clientes.
 - Maior controle e rastreabilidade das Ordens de Serviço executadas pela empresa.
 - Otimização parcial dos processos administrativos e financeiros.
 - Melhoria na organização operacional e no fluxo de atendimento aos clientes.
 - Capacitação tecnológica dos responsáveis pela utilização do sistema.
-- Maior eficiência no gerenciamento dos serviços prestados pela empresa parceira.*
+- Maior eficiência no gerenciamento dos serviços prestados pela empresa parceira.
+*
 
 ### 9.3 Resultados para a Formação dos Alunos
 
-*- Aplicação prática dos conhecimentos adquiridos ao longo da disciplina.
+*
+- Aplicação prática dos conhecimentos adquiridos ao longo da disciplina.
 - Desenvolvimento de competências técnicas em desenvolvimento web, banco de dados e infraestrutura computacional.
 - Experiência prática em levantamento de requisitos e relacionamento com a comunidade parceira.
 - Aprimoramento das habilidades de trabalho em equipe, comunicação e gestão de projetos.
-- Desenvolvimento de visão crítica sobre o impacto social das soluções tecnológicas.*
+- Desenvolvimento de visão crítica sobre o impacto social das soluções tecnológicas.
+*
 
 ---
 
 ## 10. Dificuldades Encontradas
 
-*Durante a execução do projeto, foram identificados desafios relacionados principalmente ao levantamento inicial dos requisitos e à adaptação da solução às necessidades específicas da empresa parceira.
+Durante a execução do projeto, foram identificados desafios relacionados principalmente ao levantamento inicial dos requisitos e à adaptação da solução às necessidades específicas da empresa parceira.
 
 A ausência de processos formalmente documentados dificultou a identificação inicial do fluxo operacional da organização, exigindo reuniões periódicas para refinamento das funcionalidades e validação das etapas de desenvolvimento.
 
 Também foram encontrados desafios técnicos relacionados à integração entre front-end, back-end e banco de dados, bem como à definição de uma infraestrutura adequada para implantação local da aplicação de forma segura, estável e de fácil manutenção.
 
-As dificuldades identificadas foram mitigadas por meio da divisão estratégica das atividades entre os integrantes da equipe, realização de testes contínuos, reuniões de alinhamento técnico e acompanhamento constante junto à comunidade parceira.*
+As dificuldades identificadas foram mitigadas por meio da divisão estratégica das atividades entre os integrantes da equipe, realização de testes contínuos, reuniões de alinhamento técnico e acompanhamento constante junto à comunidade parceira.
 
 ---
 
 ## 11. Conclusão
 
-*O projeto extensionista atingiu os objetivos propostos ao desenvolver e implementar uma solução tecnológica funcional e alinhada às necessidades operacionais da Alpha Hard Informática.
+O projeto extensionista atingiu os objetivos propostos ao desenvolver e implementar uma solução tecnológica funcional e alinhada às necessidades operacionais da Alpha Hard Informática.
 
 A implantação do sistema proporcionou melhorias significativas nos processos de organização, gerenciamento de Ordens de Serviço, controle financeiro e administração interna da empresa, contribuindo diretamente para o aumento da eficiência operacional e da qualidade dos serviços prestados aos clientes.
 
 Além dos benefícios gerados para a comunidade parceira, o projeto proporcionou aos integrantes da equipe uma experiência prática relevante, permitindo a aplicação dos conhecimentos adquiridos ao longo da formação acadêmica em um contexto real de desenvolvimento tecnológico e atendimento à comunidade.
 
-A atividade extensionista reforçou a importância da integração entre universidade e sociedade, evidenciando o potencial das soluções computacionais como ferramentas de transformação organizacional, inovação e impacto social.*
+A atividade extensionista reforçou a importância da integração entre universidade e sociedade, evidenciando o potencial das soluções computacionais como ferramentas de transformação organizacional, inovação e impacto social.
 
 ---
 
@@ -196,11 +202,13 @@ A atividade extensionista reforçou a importância da integração entre univers
 
 ## 13. Referências
 
-*- Docker Inc. Docker Documentation. Disponível em: https://www.docker.com/
+*
+- Docker Inc. Docker Documentation. Disponível em: https://www.docker.com/
 - Flask Documentation. Disponível em: https://flask.palletsprojects.com/
 - MariaDB Foundation. MariaDB Documentation. Disponível em: https://mariadb.org/
 - PRESSMAN, Roger S. Engenharia de Software: uma abordagem profissional.
-- TANENBAUM, Andrew S.; WETHERALL, David. Redes de Computadores.*
+- TANENBAUM, Andrew S.; WETHERALL, David. Redes de Computadores.
+*
 
 ---
 
