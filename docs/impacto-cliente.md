@@ -118,9 +118,9 @@ Suporte Pós-Implantação: O grupo de desenvolvimento se comprometeu a oferecer
 *(Referencie as fotos incluídas na pasta `evidencias/fotos/` que comprovam o impacto da solução.)*
 
 | Foto | Descrição | Data |
+|<img width="1408" height="677" alt="image" src="https://github.com/user-attachments/assets/3d18af20-cd08-41f9-bc56-721956846f7c" />
+|Foto do treinamento dos técnicos para uso do novo sistema|23/03/2026|
 |------|-----------|------|
-| `evidencias/fotos/*(nome_arquivo)*` | *(Descrição da foto)* | *(Data)* |
-
 ---
 
 > **Nota:** Este documento serve como comprovação para fins de extensão universitária (MEC). Seja detalhado e inclua evidências sempre que possível.
