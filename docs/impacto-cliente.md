@@ -117,8 +117,7 @@ Suporte Pós-Implantação: O grupo de desenvolvimento se comprometeu a oferecer
 
 *(Referencie as fotos incluídas na pasta `evidencias/fotos/` que comprovam o impacto da solução.)*
 
-| evidencias/fotos/treinamento-usuario.jpg| Foto do treinamento dos técnicos para uso do novo sistema utilizando a OS| 23/03/2026 |
-|  <img width="1466" height="720" alt="image" src="https://github.com/user-attachments/assets/fd849861-cda7-4365-aa50-6d6764e622e5" /> |
-| *Foto do treinamento dos técnicos para uso do novo sistema utilizando a OS* | *23/03/2026* |
+|<img width="1466" height="720" alt="image" src="https://github.com/user-attachments/assets/7d856c9c-521c-4576-9c51-d3fba1e8bf2b" /> | 
+| `evidencias/fotos/treinamento-usuario.jpg` | *(Foto do treinamento dos técnicos para uso do novo sistema)* | *(23/03/2026)* |
 
 > **Nota:** Este documento serve como comprovação para fins de extensão universitária (MEC). Seja detalhado e inclua evidências sempre que possível.
