@@ -6,7 +6,7 @@
 
 ## 1. Identificação
 
-| Campo | Descrição |
+| Campo | Descrição | 
 |-------|-----------|
 | **Comunidade parceira** | *(Alpha Hard Informática)* |
 | **Projeto desenvolvido** | *(Desenvolvimento do Sistema de Gerenciamento Estruturado )* |
