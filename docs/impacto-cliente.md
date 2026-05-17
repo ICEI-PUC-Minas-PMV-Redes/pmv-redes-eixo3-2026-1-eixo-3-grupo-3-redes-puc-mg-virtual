@@ -79,19 +79,27 @@ Gestão Fiscal: A solução não contempla integração com sistemas de emissão
 
 ### 5.3 Sustentabilidade da Solução
 
-*(Analise a capacidade da comunidade de manter a solução funcionando após a saída do grupo. A comunidade tem pessoas capacitadas para dar manutenção? Há custos recorrentes? O que foi feito para garantir a sustentabilidade?)*
+*(A sustentabilidade da solução foi planejada considerando o porte e as capacidades da comunidade parceira:
+
+Capacitação: Ambos os responsáveis foram treinados para operar o sistema de forma autônoma, incluindo registro de OS, consultas, geração de relatórios e procedimentos básicos de manutenção.
+
+Custos Recorrentes: A solução utiliza tecnologias de código aberto (Python, Docker), sem custos de licença. Os custos limitam-se à energia elétrica e eventual manutenção de hardware.
+
+Documentação: Foi fornecido um manual de uso e a documentação técnica do sistema, armazenados no repositório do projeto no GitHub, permitindo consulta futura e eventual suporte externo.
+
+Suporte Pós-Implantação: O grupo de desenvolvimento se comprometeu a oferecer suporte remoto por 30 dias após a entrega do projeto para a resolução de dúvidas e ajustes necessários.)*
 
 ---
 
 ## 6. Feedback da Comunidade
 
-*(Registre depoimentos e feedbacks recebidos de membros da comunidade parceira sobre a solução implementada. Inclua citações diretas quando autorizadas.)*
+*(Os depoimentos abaixo foram coletados junto aos responsáveis da Alpha Hard Informática após a implantação da solução:)*
 
 **Depoimento 1:**
-> *(Transcrever depoimento)* – ***(Nome, cargo)***
+> *"O sistema facilitou muito o nosso dia a dia. Antes, a gente perdia tempo procurando informações do cliente nas planilhas. Agora é só digitar o nome e já aparece todo o histórico. As ordens de serviço ficaram muito mais organizadas."* – ***(Marcus Paulo Araújo, Responsável pelo contato / Técnico)***
 
 **Depoimento 2:**
-> *(Transcrever depoimento)* – ***(Nome, cargo)***
+> *"A melhor parte para mim foi o fechamento do mês. Antes, a gente passava horas juntando papéis e somando valores para gerar os relatórios e as invoices. Agora o sistema faz tudo sozinho em minutos. Além disso, a nova rede deixou o acesso muito mais rápido e estável, e conseguir consultar o histórico de garantia do cliente na hora do atendimento passou muito mais profissionalismo."* – ***(André Ribeiro, Técnico de Manutenção / Suporte)***
 
 ---
 
