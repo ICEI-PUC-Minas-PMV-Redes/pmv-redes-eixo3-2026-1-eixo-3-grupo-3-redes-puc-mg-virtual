@@ -45,7 +45,7 @@
 
 ## 4. Resumo da Atividade
 
-*O projeto extensionista foi desenvolvido em parceria com a empresa Alpha Hard Informática, sediada em Volta Redonda/RJ, com o propósito de atender às demandas relacionadas à ausência de um sistema estruturado de gerenciamento e de uma infraestrutura tecnológica adequada para suporte às operações da organização.
+O projeto extensionista foi desenvolvido em parceria com a empresa Alpha Hard Informática, sediada em Volta Redonda/RJ, com o propósito de atender às demandas relacionadas à ausência de um sistema estruturado de gerenciamento e de uma infraestrutura tecnológica adequada para suporte às operações da organização.
 
 Antes da implementação da solução, os processos internos eram executados de forma manual, utilizando planilhas eletrônicas, anotações informais e aplicativos de mensagens, o que ocasionava inconsistências no controle das Ordens de Serviço (OS), dificuldades na organização das informações, baixa rastreabilidade dos atendimentos e limitações nos processos administrativos e financeiros.
 
@@ -53,7 +53,7 @@ Como resposta às necessidades identificadas, foi desenvolvido e implantado um s
 
 As atividades executadas compreenderam levantamento e análise de requisitos junto à comunidade parceira, modelagem da solução, prototipação, desenvolvimento das camadas back-end e front-end, realização de testes funcionais, capacitação dos usuários e elaboração da documentação técnica do sistema.
 
-Os resultados obtidos proporcionaram melhorias significativas na organização operacional da empresa, redução no tempo de atendimento, aumento da segurança e confiabilidade das informações, além do aprimoramento do controle administrativo e financeiro. O projeto também contribuiu de forma relevante para a formação acadêmica e profissional dos alunos envolvidos, promovendo a aplicação prática dos conhecimentos adquiridos ao longo do curso e fortalecendo competências técnicas, sociais e colaborativas.*
+Os resultados obtidos proporcionaram melhorias significativas na organização operacional da empresa, redução no tempo de atendimento, aumento da segurança e confiabilidade das informações, além do aprimoramento do controle administrativo e financeiro. O projeto também contribuiu de forma relevante para a formação acadêmica e profissional dos alunos envolvidos, promovendo a aplicação prática dos conhecimentos adquiridos ao longo do curso e fortalecendo competências técnicas, sociais e colaborativas.
 
 ---
 
@@ -132,35 +132,29 @@ A implementação da solução permitiu maior centralização das informações,
 
 ### 9.1 Resultados Técnicos
 
-*
 - Desenvolvimento de um sistema web integrado para gerenciamento de Ordens de Serviço e cadastro de clientes.
 - Implementação de dashboard administrativo para acompanhamento operacional e financeiro.
 - Estruturação de banco de dados relacional utilizando MariaDB, garantindo maior integridade e organização das informações.
 - Implantação da solução em ambiente conteinerizado utilizando Docker.
 - Melhoria da infraestrutura computacional e da organização dos serviços internos da empresa.
 - Aumento da segurança e confiabilidade no armazenamento dos dados operacionais.
-*
 
 ### 9.2 Resultados para a Comunidade
 
-*
 - Redução do tempo necessário para localização e gerenciamento das informações dos clientes.
 - Maior controle e rastreabilidade das Ordens de Serviço executadas pela empresa.
 - Otimização parcial dos processos administrativos e financeiros.
 - Melhoria na organização operacional e no fluxo de atendimento aos clientes.
 - Capacitação tecnológica dos responsáveis pela utilização do sistema.
 - Maior eficiência no gerenciamento dos serviços prestados pela empresa parceira.
-*
 
 ### 9.3 Resultados para a Formação dos Alunos
 
-*
 - Aplicação prática dos conhecimentos adquiridos ao longo da disciplina.
 - Desenvolvimento de competências técnicas em desenvolvimento web, banco de dados e infraestrutura computacional.
 - Experiência prática em levantamento de requisitos e relacionamento com a comunidade parceira.
 - Aprimoramento das habilidades de trabalho em equipe, comunicação e gestão de projetos.
 - Desenvolvimento de visão crítica sobre o impacto social das soluções tecnológicas.
-*
 
 ---
 
@@ -202,13 +196,12 @@ A atividade extensionista reforçou a importância da integração entre univers
 
 ## 13. Referências
 
-*
 - Docker Inc. Docker Documentation. Disponível em: https://www.docker.com/
 - Flask Documentation. Disponível em: https://flask.palletsprojects.com/
 - MariaDB Foundation. MariaDB Documentation. Disponível em: https://mariadb.org/
 - PRESSMAN, Roger S. Engenharia de Software: uma abordagem profissional.
 - TANENBAUM, Andrew S.; WETHERALL, David. Redes de Computadores.
-*
+
 
 ---
 
@@ -218,7 +211,7 @@ A atividade extensionista reforçou a importância da integração entre univers
 
 | Anexo | Descrição | Localização no Repositório |
 |-------|-----------|----------------------------|
-| Termo de parceria | Termo assinado com a comunidade | `evidencias/termos/` |
+| Termo de parceria | Termo assinado com a comunidade | `evidencias/termos` |
 | Atas de reunião | Atas das reuniões com a comunidade | `evidencias/atas/` |
 | Registro fotográfico | Fotos das visitas e atividades | `evidencias/fotos/` |
 | Depoimentos | Depoimentos dos membros da comunidade | `evidencias/depoimentos/` |
