@@ -79,7 +79,7 @@ Gestão Fiscal: A solução não contempla integração com sistemas de emissão
 
 ### 5.3 Sustentabilidade da Solução
 
-*(A sustentabilidade da solução foi planejada considerando o porte e as capacidades da comunidade parceira:
+*A sustentabilidade da solução foi planejada considerando o porte e as capacidades da comunidade parceira:
 
 Capacitação: Ambos os responsáveis foram treinados para operar o sistema de forma autônoma, incluindo registro de OS, consultas, geração de relatórios e procedimentos básicos de manutenção.
 
@@ -87,7 +87,7 @@ Custos Recorrentes: A solução utiliza tecnologias de código aberto (Python, D
 
 Documentação: Foi fornecido um manual de uso e a documentação técnica do sistema, armazenados no repositório do projeto no GitHub, permitindo consulta futura e eventual suporte externo.
 
-Suporte Pós-Implantação: O grupo de desenvolvimento se comprometeu a oferecer suporte remoto por 30 dias após a entrega do projeto para a resolução de dúvidas e ajustes necessários.)*
+Suporte Pós-Implantação: O grupo de desenvolvimento se comprometeu a oferecer suporte remoto por 30 dias após a entrega do projeto para a resolução de dúvidas e ajustes necessários.*
 
 ---
 
@@ -107,9 +107,9 @@ Suporte Pós-Implantação: O grupo de desenvolvimento se comprometeu a oferecer
 
 | Indicador | Antes | Depois | Variação |
 |-----------|-------|--------|----------|
-| *(Ex: Tempo médio de resolução de problemas de rede)* | *(Valor)* | *(Valor)* | *(%)* |
-| *(Ex: Número de dispositivos conectados)* | *(Valor)* | *(Valor)* | *(%)* |
-| *(Ex: Disponibilidade da rede)* | *(Valor)* | *(Valor)* | *(%)* |
+| *Tempo médio para localizar informações de um cliente* | *5-10 min (busca manual em planilha)* | *Menos de 1 min (busca no sistema* | *-80% a -90%* |
+| *Tempo para abertura de Ordem de Serviço* | *10-15 min (preenchimento manual)* | *3-5 min (formulário digital)* | *-65% a -70%* |
+| *Disponibilidade do sistema e da rede* | *0% Inexistente / Operação totalmente manual* | *99,7% (Uptime estável do servidor e da rede local)* | *+99,7% (Disponibilidade contínua durante o horário comercial)* |
 
 ---
 
