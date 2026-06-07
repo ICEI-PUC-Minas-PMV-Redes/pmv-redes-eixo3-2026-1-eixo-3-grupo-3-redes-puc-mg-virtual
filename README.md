@@ -88,7 +88,25 @@
 
 ## 🚀 Como Executar
 
-*(Preencher na Etapa 4 – Instruções de como instalar, configurar e executar o sistema desenvolvido. Veja o template em `docs/templates/implantacao.md`)*
+Pré-requisitos
+Docker Desktop
+Docker Compose
+Git
+Clonar o Repositório
+git clone https://github.com/ICEI-PUC-Minas-PMV-Redes/pmv-redes-eixo3-2026-1-eixo-3-grupo-3-redes-puc-mg-virtual.git
+cd pmv-redes-eixo3-2026-1-eixo-3-grupo-3-redes-puc-mg-virtual
+
+## Iniciar a Aplicação
+docker compose up --build
+
+## Acessar o Sistema
+Após a inicialização:
+
+Front-end: http://localhost:3000
+API: http://localhost:8000
+
+## Encerrar a Aplicação
+docker compose down
 
 ---
 
