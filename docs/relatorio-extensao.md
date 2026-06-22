@@ -118,9 +118,9 @@ Além das atividades técnicas, também foram produzidas documentações funcion
 | Especificação e prototipação | *24/02/2026 – 09/03/2026* | *24/02/2026 – 09/03/2026* | *Validação dos protótipos e definição da arquitetura* |
 | Desenvolvimento do back-end | *10/03/2026 – 12/04/2026* | *10/03/2026 – 12/04/2026* | *Implementação das APIs e regras de negócio* |
 | Desenvolvimento do front-end | *13/04/2026 – 17/05/2026* | *13/04/2026 – 17/05/2026* | *Construção das interfaces do sistema* |
-| Testes e ajustes | *10/03/2026 – 21/06/2026* | *Em andamento* | *Correções e melhorias contínuas* |
-| Documentação | *10/02/2026 – 21/06/2026* | *Em andamento* | *Elaboração dos relatórios e documentação funcional* |
-| Apresentação | *08/06/2026 – 21/06/2026* | *Em andamento* | *Demonstração oficial da solução desenvolvida* |
+| Testes e ajustes | *10/03/2026 – 21/06/2026* | *17/05/2026 – 25/05/2026* | *Correções e melhorias contínuas* |
+| Documentação | *10/02/2026 – 21/06/2026* | *25/05/2026 - 05/06/2026* | *Elaboração dos relatórios e documentação funcional* |
+| Apresentação | *08/06/2026 – 21/06/2026* | *15/06/2026* | *Demonstração oficial da solução desenvolvida* |
 
 ---
 
